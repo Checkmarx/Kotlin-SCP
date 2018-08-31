@@ -1,0 +1,25 @@
+{
+  "name": "kotlin-scp",
+  "version": "0.0.0",
+  "description": "Kotlin Secure Coding Practices",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gitbook-cli": "^2.3.2"
+  },
+  "scripts": {
+    "serve": "node_modules/.bin/gitbook serve",
+    "build-pdf": "node_modules/.bin/gitbook pdf ./ ./build/kotlin-secure-coding-practices.pdf",
+    "build-epub": "node_modules/.bin/gitbook epub ./ ./build/kotlin-secure-coding-practices.epub",
+    "build-mobi": "node_modules/.bin/gitbook mobi ./ ./build/kotlin-secure-coding-practices.mobi",
+    "build": "npm run build-pdf; npm run build-epub; npm run build-mobi"
+  },
+  "keywords": [
+    "Kotlin",
+    "Mobile",
+    "Security",
+    "Checkmarx"
+  ],
+  "author": "Checkmarx Security Research Team",
+  "license": "CC BY-SA 4.0"
+}
