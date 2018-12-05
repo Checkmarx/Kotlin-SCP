@@ -3,7 +3,7 @@ M7: Client Code Quality
 
 In this category fit code-level issues like a buffer overflow in C or a
 DOM-based XSS in a Webview mobile app. Usually something that requires code
-changes to be fixed as it is cased by an improper API or language constructs
+changes to be fixed as it is caused by an improper API or language constructs
 usage.
 
 Although Client Code Quality issues are prevalent the exploitation requires
