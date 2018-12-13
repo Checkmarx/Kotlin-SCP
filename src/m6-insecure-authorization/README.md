@@ -21,7 +21,7 @@ vulnerable to Insecure Authorization.
 The movie below demonstrates how Insecure Authorization can be exploited on our
 Kotlin goat.
 
-@todo include exploitation movie
+* @todo include exploitation movie
 
 In order to fix the Insecure Authorization, the backend should perform role and
 permissions validation of the authenticated individual using only information

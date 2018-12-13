@@ -21,7 +21,7 @@ secrets, making the keys available to the attacker.
 In the movie below you'll see how our Kotlin application cryptography fails
 allowing access to the unencrypted version of stored data.
 
-@todo movie
+* @todo movie
 
 To address Insecure Cryptography we will replace the encryption algorithm by the
 [AES - Advanced Encrypt Standard (Rijndael)][1]. As many other symmetric
@@ -31,9 +31,8 @@ former is an authenticated cipher mode, meaning that after the encryption stage,
 an authentication tag is added to the ciphertext, which will then be validated
 prior to message decryption, ensuring the message has not been tampered with.
 
-@todo how to manage encryption key
-
-@todo fix
+* @todo how to manage encryption key
+* @todo fix
 
 
 [1]: https://en.wikipedia.org/wiki/Advanced_Encryption_Standard

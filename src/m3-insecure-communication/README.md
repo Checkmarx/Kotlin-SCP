@@ -16,8 +16,7 @@ adversary access to exchanged data and then, in the second part, application's
 network traffic will be actually modified.
 
 
-@todo implement some client-server communication on our kotlin goat
-@todo add video from vimeo or youtube: 1) network monitorin 2) mitm
+* @todo add video from vimeo or youtube: 1) network monitorin 2) mitm
 
 Now that we have seen the exploitation taking place, it's time to go back to
 application source code and fix this issue. We will add SSL/TLS to all
@@ -30,8 +29,8 @@ the server. You can get certificates with [Let's Encrypt - a free, automated and
 open Certificate Authority][4]. Following the [documentation you'll get them
 deployed easily][5].
 
-@todo add SSL/TLS to all application communications
-@todo implement Certificate Pinning
+* @todo add SSL/TLS to all application communications
+* @todo implement Certificate Pinning
 
 ## Resources
 

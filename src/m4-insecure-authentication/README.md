@@ -25,15 +25,15 @@ highlighting also problems with the authorization controls.
 The movie below shows Insecure Authentication exploitation on our Kotlin
 application.
 
-@todo show signup requesting 4-digits PIN
-@todo show getting access to local database and username:password
+* @todo show signup activity exchanging authentication data
+* @todo show getting access to local database and username:password
 
 Now it is time to improve the application establishing a strong password policy
 and storing authentication data safely: we will keep authentication data locally
 as not all applications have a backend server to handle it.
 
-@todo implement a strong password policy
-@todo store a salted version of username and passowrd
+* @todo implement a strong password policy
+* @todo store a salted version of username and passowrd
 
 Keep in mind that this is just a brief overview over Insecure Authentication.
 Specially if you're doing local authentication you're recommended to carefully

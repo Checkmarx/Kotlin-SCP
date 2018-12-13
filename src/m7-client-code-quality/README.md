@@ -10,7 +10,7 @@ Although Client Code Quality issues are prevalent the exploitation requires
 low-level knowledge. The typical primary goal is to execute foreign code within
 the mobile code's address space.
 
-@todo movie
+* @todo movie
 
 Consistent coding patterns and coding style guidelines broadly accepted in the
 organization will help to improve code quality. As these issues are not easily
