@@ -9,8 +9,8 @@ what you may think, unlike passwords, you may be forced to give up your
 fingerprint.
 
 Unless there's a functional requirement, mobile applications do not require a
-backend server to which they should be authenticated in real-time. Even when
-such backend server exists usually users are not required to be online at all
+back-end server to which they should be authenticated in real-time. Even when
+such back-end server exists usually users are not required to be online at all
 times. This poses a great challenge on mobile applications authentication as if
 authentication has to happen locally, then it can be bypassed on jailbroken
 devices through runtime manipulation or modification of the binary.
@@ -30,14 +30,14 @@ application.
 
 Now it is time to improve the application establishing a strong password policy
 and storing authentication data safely: we will keep authentication data locally
-as not all applications have a backend server to handle it.
+as not all applications have a back-end server to handle it.
 
 * @todo implement a strong password policy
 * @todo store a salted version of username and passowrd
 
 Keep in mind that this is just a brief overview over Insecure Authentication.
 Specially if you're doing local authentication you're recommended to carefully
-read sections M8 - Code Tampering and M9 - Reverse Engineering 
+read sections [M8: Code Tampering][2] and [M9: Reverse Engineering][3]
 
 ## Resources
 
@@ -49,4 +49,6 @@ read sections M8 - Code Tampering and M9 - Reverse Engineering
   Controls][1]
 
 [1]: https://www.owasp.org/index.php/Authentication_Cheat_Sheet#Implement_Proper_Password_Strength_Controls
+[2]: ../m8-code-tampering/README.md
+[3]: ../m9-reverse-engineering/README.md
 
