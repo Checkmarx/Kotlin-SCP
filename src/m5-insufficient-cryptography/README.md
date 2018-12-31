@@ -19,7 +19,7 @@ encryption algorithm will be worthless if your application fails to keep its
 secrets, making the keys available to the attacker.
 
 In the movie below you'll see how our Kotlin application cryptography fails
-allowing access to the unencrypted version of stored data.
+enabling the adversary to get the unencrypted version of stored data.
 
 * @todo movie
 
@@ -31,9 +31,76 @@ former is an authenticated cipher mode, meaning that after the encryption stage,
 an authentication tag is added to the ciphertext, which will then be validated
 prior to message decryption, ensuring the message has not been tampered with.
 
-* @todo how to manage encryption key
-* @todo fix
+All major changes were done in the [CryptoHelper class][] which was given two
+new methods: `createUserKey()` and `getUserKey()`. `encrypt()` and `decrypt()`
+methods were also changed to receive a `usernane` argument.
 
+```kotlin
+package com.cx.vulnerablekotlinapp.helpers
+// ...
+class CryptoHelper {
+    companion object {
+        fun createUserKey(username: String) { /* ... */ }
+        private fun getUserKey(username: String): SecretKey? { /* ... */ }
+        fun encrypt(original: String, username: String): String { /* ... */ }
+        fun decrypt(message: String, username: String): String { /* ... */ }
+    }
+}
+```
+
+As said before encryption depends on secrets (keys), which should be handled
+carefully. In this case, on successful signup, a random key is created and 
+persisted in [Android Keystore][2]: this key is user specific (see
+[SignupActivity][6]) and is used to encrypt/decrypt user's notes only.
+
+Every time encryption/decryption is required, the `username` should be provided
+to the appropriate `CryptoHelper` method as it is used as alias to located
+user's key in Android Keystore (see [CryptoHelper.getUserKey()][7]).
+
+```kotlin
+package com.cx.vulnerablekotlinapp.helpers
+// ...
+class CryptoHelper {
+    companion object {
+        private fun getUserKey(username: String): SecretKey? {
+            val ks: KeyStore = KeyStore.getInstance("AndroidKeyStore").apply {
+                load(null)
+            }
+            val entry = ks.getEntry(username, null) as? KeyStore.SecretKeyEntry
+            // @todo handle null entry
+            return entry?.secretKey
+        }
+    }
+}
+```
+
+There's another implementation detail worth mentioning as it may pose
+challenging. AES GCM encryption requires an [Initialization Vector][8] (IV). By
+default this is a random value: the value used during encryption should then be
+used on the corresponding decryption operation. Although randomness can be
+disabled (see [`setRandomizedEncryptionRequired()`][9]), replacing random IV by
+a constant value, this will reduce encryption security.
+
+In our implementation we kept IV random, prepending it to the encrypted message.
+Then, while decrypting, the first 12 bytes correspond to the IV and the rest to
+the message. Note that IV is not secret.
+
+## Resources
+
+### Tools
+
+### Readings
+
+* [Android Keystore System][2]
+* [Using the Android Keystore system to store and retrieve sensitive information][3]
+* [Securely Storing Secrets in an Android Application][4]
 
 [1]: https://en.wikipedia.org/wiki/Advanced_Encryption_Standard
-
+[2]: https://developer.android.com/training/articles/keystore
+[3]: https://medium.com/@josiassena/using-the-android-keystore-system-to-store-sensitive-information-3a56175a454b
+[4]: https://medium.com/@ericfu/securely-storing-secrets-in-an-android-application-501f030ae5a3
+[5]: https://github.com/Checkmarx/Kotlin-Goat/blob/feature/m5-insufficient-cryptography/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/CryptoHelper.kt
+[6]: https://github.com/Checkmarx/Kotlin-Goat/blob/feature/m5-insufficient-cryptography/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/SignupActivity.kt#L63
+[7]: https://github.com/Checkmarx/Kotlin-Goat/blob/feature/m5-insufficient-cryptography/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/CryptoHelper.kt#L35
+[8]: https://en.wikipedia.org/wiki/Initialization_vector
+[9]: https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.Builder.html#setRandomizedEncryptionRequired(boolean)
