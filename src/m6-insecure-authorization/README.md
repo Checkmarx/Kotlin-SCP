@@ -75,9 +75,9 @@ router.get('/accounts/:username/notes', [auth, ownership], async (req, res, next
 * [Testing for Insecure Direct Object References (OTG-AUTHZ-004)][6]
 * [Using middleware - Express][7]
 
-[1]: https://github.com/Checkmarx/Kotlin-Goat/blob/develop/packages/services/api/src/routes/accounts.js#L29
-[2]: https://github.com/Checkmarx/Kotlin-Goat/blob/develop/packages/services/api/src/middleware/auth.js#L3
-[3]: https://github.com/Checkmarx/Kotlin-Goat/blob/develop/packages/services/api/src/middleware/ownership.js
+[1]: http://vps372134.ovh.net:3000/paulo/kotlin-goat/src/develop/packages/services/api/src/routes/accounts.js#L29
+[2]: http://vps372134.ovh.net:3000/paulo/kotlin-goat/src/develop/packages/services/api/src/middleware/auth.js#L3
+[3]: http://vps372134.ovh.net:3000/paulo/kotlin-goat/src/develop/packages/services/api/src/middleware/ownership.js
 [4]: https://www.owasp.org/index.php/Mobile_Top_10_2016-M6-Insecure_Authorization
 [5]: https://www.owasp.org/index.php/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet
 [6]: https://www.owasp.org/index.php/Testing_for_Insecure_Direct_Object_References_(OTG-AUTHZ-004)

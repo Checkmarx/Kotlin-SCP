@@ -25,7 +25,9 @@ highlighting also problems with the authorization controls.
 The movie below shows Insecure Authentication exploitation on our Kotlin
 application.
 
-* @todo show getting access to local database and username:password
+<center>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z6f81ibmsk4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
 
 Now it is time to improve the application establishing a strong password policy
 and storing authentication data safely: we will keep authentication data locally
@@ -198,13 +200,13 @@ packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/SignupActi
 [1]: https://www.owasp.org/index.php/Authentication_Cheat_Sheet#Implement_Proper_Password_Strength_Controls
 [2]: ../m8-code-tampering/README.md
 [3]: ../m9-reverse-engineering/README.md
-[4]: https://github.com/Checkmarx/Kotlin-Goat/blob/feature/m4-insecure-authentication/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/PasswordHelper.kt
-[5]: https://github.com/Checkmarx/Kotlin-Goat/blob/feature/m4-insecure-authentication/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/SignupActivity.kt#L42
+[4]: http://vps372134.ovh.net:3000/paulo/kotlin-goat/src/feature/m4-insecure-authentication/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/PasswordHelper.kt
+[5]: hhttp://vps372134.ovh.net:3000/paulo/kotlin-goat/src/feature/m4-insecure-authentication/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/SignupActivity.kt#L42
 [6]: https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet#Leverage_an_adaptive_one-way_function
 [7]: https://en.wikipedia.org/wiki/Bcrypt
 [8]: https://en.wikipedia.org/wiki/PBKDF2
 [9]: https://en.wikipedia.org/wiki/Argon2
 [10]: https://en.wikipedia.org/wiki/Scrypt
 [11]: http://www.mindrot.org/projects/jBCrypt/
-[12]: https://github.com/Checkmarx/Kotlin-Goat/blob/feature/m4-insecure-authentication/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/SignupActivity.kt#L58
-[13]: https://github.com/Checkmarx/Kotlin-Goat/blob/feature/m4-insecure-authentication/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/LoginActivity.kt#L225
+[12]: http://vps372134.ovh.net:3000/paulo/kotlin-goat/src/feature/m4-insecure-authentication/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/SignupActivity.kt#L58
+[13]: http://vps372134.ovh.net:3000/paulo/kotlin-goat/src/feature/m4-insecure-authentication/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/LoginActivity.kt#L225

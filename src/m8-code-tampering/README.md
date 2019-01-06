@@ -148,4 +148,4 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
 
 [1]: https://www.owasp.org/index.php/OWASP_Reverse_Engineering_and_Code_Modification_Prevention_Project
 [2]: https://blog.netspi.com/android-root-detection-techniques/
-[3]: https://github.com/Checkmarx/Kotlin-Goat/blob/feature/m8-code-tampering/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/RootDetectionHelper.kt
+[3]: http://vps372134.ovh.net:3000/paulo/kotlin-goat/src/feature/m8-code-tampering/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/RootDetectionHelper.kt

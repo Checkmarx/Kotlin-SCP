@@ -15,8 +15,9 @@ Kotlin mobile application. The movie starts with network monitoring, what gives
 adversary access to exchanged data and then, in the second part, application's
 network traffic will be actually modified.
 
-
-* @todo add video from vimeo or youtube: 1) network monitorin 2) mitm
+<center>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Lkb7B_B9Nyg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
 
 Now that we have seen the exploitation taking place, it's time to go back to
 application source code and fix this issue. We will add SSL/TLS to all
@@ -124,5 +125,5 @@ feature.
 [5]: https://letsencrypt.org/docs/
 [6]: https://github.com/square/okhttp/wiki/HTTPS#certificate-pinning
 [7]: https://github.com/square/okhttp
-[8]: https://github.com/Checkmarx/Kotlin-Goat/tree/feature/m3-insecure-communication
+[8]: http://vps372134.ovh.net:3000/paulo/kotlin-goat/src/feature/m3-insecure-communication
 

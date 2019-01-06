@@ -12,4 +12,4 @@ Summary
 * [M8: Code Tampering](m8-code-tampering/README.md)
 * [M9: Reverse Engineering](m9-reverse-engineering/README.md)
 * [M10: Extraneous Functionality](m10-extraneous-functionality/README.md)
-* [Contributing](CONTRIBUTING.md)
+* [Hot to Contribute](CONTRIBUTING.md)
