@@ -17,6 +17,7 @@ network traffic will be actually modified.
 
 <center>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Lkb7B_B9Nyg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p><a href="https://www.youtube.com/watch?v=Lkb7B_B9Nyg">Watch the video on Youtube</a></p>
 </center>
 
 Now that we have seen the exploitation taking place, it's time to go back to
@@ -126,4 +127,3 @@ feature.
 [6]: https://github.com/square/okhttp/wiki/HTTPS#certificate-pinning
 [7]: https://github.com/square/okhttp
 [8]: http://vps372134.ovh.net:3000/paulo/kotlin-goat/src/feature/m3-insecure-communication
-
