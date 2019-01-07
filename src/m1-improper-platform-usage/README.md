@@ -53,5 +53,5 @@ More information about how to test improper platform usage can be found on the O
 * [Android documentation][1]
 * [Testing Platform Interaction][2]
 
-[1] : https://developer.android.com/reference/android/content/ContentProvider
-[2] : https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05h-Testing-Platform-Interaction.md
+[1]: https://developer.android.com/reference/android/content/ContentProvider
+[2]: https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05h-Testing-Platform-Interaction.md
