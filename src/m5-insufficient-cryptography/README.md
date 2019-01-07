@@ -97,6 +97,7 @@ the message. Note that IV is not secret.
 * [Android Keystore System][2]
 * [Using the Android Keystore system to store and retrieve sensitive information][3]
 * [Securely Storing Secrets in an Android Application][4]
+* [M5: OWASP Mobile Top 10 2016] [10]
 
 [1]: https://en.wikipedia.org/wiki/Advanced_Encryption_Standard
 [2]: https://developer.android.com/training/articles/keystore
@@ -107,3 +108,4 @@ the message. Note that IV is not secret.
 [7]: http://vps372134.ovh.net:3000/paulo/kotlin-goat/src/feature/m5-insufficient-cryptography/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/CryptoHelper.kt#L35
 [8]: https://en.wikipedia.org/wiki/Initialization_vector
 [9]: https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.Builder.html#setRandomizedEncryptionRequired(boolean)
+[10]: https://www.owasp.org/index.php/Mobile_Top_10_2016-M5-Insufficient_Cryptography

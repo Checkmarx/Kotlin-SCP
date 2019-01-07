@@ -27,9 +27,10 @@ Different tools can be used to obfuscate the code of your Android app sucha as p
 
 
 ### Readings
-
+* [M9: OWASP Mobile Top 10 2016] [4]
 
 
 [1]: https://github.com/skylot/jadx
 [2]: http://jd.benow.ca/
 [3]: https://ibotpeaches.github.io/Apktool/
+[4]: https://www.owasp.org/index.php/Mobile_Top_10_2016-M9-Reverse_Engineering

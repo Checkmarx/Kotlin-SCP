@@ -74,6 +74,7 @@ router.get('/accounts/:username/notes', [auth, ownership], async (req, res, next
 * [Insecure Direct Object Reference Prevention Cheat Sheet][5]
 * [Testing for Insecure Direct Object References (OTG-AUTHZ-004)][6]
 * [Using middleware - Express][7]
+* [M6: OWASP Mobile Top 10 2016] [8]
 
 [1]: http://vps372134.ovh.net:3000/paulo/kotlin-goat/src/develop/packages/services/api/src/routes/accounts.js#L29
 [2]: http://vps372134.ovh.net:3000/paulo/kotlin-goat/src/develop/packages/services/api/src/middleware/auth.js#L3
@@ -82,3 +83,4 @@ router.get('/accounts/:username/notes', [auth, ownership], async (req, res, next
 [5]: https://www.owasp.org/index.php/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet
 [6]: https://www.owasp.org/index.php/Testing_for_Insecure_Direct_Object_References_(OTG-AUTHZ-004)
 [7]: https://expressjs.com/en/guide/using-middleware.html
+[8]: https://www.owasp.org/index.php/Mobile_Top_10_2016-M6-Insecure_Authorization
