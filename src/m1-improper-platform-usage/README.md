@@ -1,6 +1,6 @@
 M1: Improper Platform Usage
 ===========================
-From the Android documentation: "Content providers are one of the primary building blocks of Android applications, providing content to applications". Content providers are mostly used to share data between Android applications. Such as Activities, Services or Receivers, Content providers can have weak permissions or can be exported for all the apps on the device. Such misconfiguration can lead the Android app to leak the data used by the Content provider.
+From the [Android documentation] [1]: "Content providers are one of the primary building blocks of Android applications, providing content to applications". Content providers are mostly used to share data between Android applications. Such as Activities, Services or Receivers, Content providers can have weak permissions or can be exported for all the apps on the device. Such misconfiguration can lead the Android app to leak the data used by the Content provider.
 
 When the Content provider is exported, all the apps can query the Content provider to retrieve or modify the data. On the kotlin-goat app, we can identifiy that a Content provider is defined with the name ".AccountProvider" and the exported tag is set to true. Here is an extract of the AndroidManifest file:
 ```
@@ -40,6 +40,8 @@ Row: 1 id=2, username=kotlin, password=goat
 
 ```
 
+More information about how to test improper platform usage can be found on the OWASP Mobile Testing Guide and especially on the [Testing Platorm Interaction] [2] section.
+
 ## Resources
 
 ### Tools
@@ -48,7 +50,7 @@ Row: 1 id=2, username=kotlin, password=goat
 
 ### Readings
 
-* [Content Provider documentation][1]
+* [Android documentation][1]
 * [Testing Platform Interaction][2]
 
 [1] : https://developer.android.com/reference/android/content/ContentProvider
