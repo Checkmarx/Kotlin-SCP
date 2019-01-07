@@ -21,7 +21,10 @@ secrets, making the keys available to the attacker.
 In the movie below you'll see how our Kotlin application cryptography fails
 enabling the adversary to get the unencrypted version of stored data.
 
-* @todo movie
+<center>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/yPB6nun8sxs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p><a href="https://www.youtube.com/watch?v=yPB6nun8sxs">Watch on Youtube</a></p>
+</center>
 
 To address Insecure Cryptography we will replace the encryption algorithm by the
 [AES - Advanced Encrypt Standard (Rijndael)][1]. As many other symmetric
@@ -31,7 +34,7 @@ former is an authenticated cipher mode, meaning that after the encryption stage,
 an authentication tag is added to the ciphertext, which will then be validated
 prior to message decryption, ensuring the message has not been tampered with.
 
-All major changes were done in the [CryptoHelper class][] which was given two
+All major changes were done in the [CryptoHelper class][7] which was given two
 new methods: `createUserKey()` and `getUserKey()`. `encrypt()` and `decrypt()`
 methods were also changed to receive a `usernane` argument.
 
