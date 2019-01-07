@@ -48,8 +48,8 @@ Row: 1 id=2, username=kotlin, password=goat
 
 ### Readings
 
-* [Content Provider documentation] [1]
-* [Testing Platform Interaction] [2]
+* [Content Provider documentation][1]
+* [Testing Platform Interaction][2]
 
 [1] : https://developer.android.com/reference/android/content/ContentProvider
 [2] : https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05h-Testing-Platform-Interaction.md
