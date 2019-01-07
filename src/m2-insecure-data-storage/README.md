@@ -132,9 +132,11 @@ The app retrieves the account stored in the database by using the getAccount fun
 If the password stored in the database matches the password provided by the user, the authentication is successful.
 
 An attacker able to access the database of the app (rooting the device, backup of the app, etc.) can retrieve the credentials
-of the different users using the app. Using [sqlitebrowser][4], it is easy to inspect the content of an SQLite database:
+of the different users using the app. Using [sqlitebrowser][4], it is easy to inspect the content of an SQLite database.
+Here is the content of the Accounts table used by the app:
 ![Viewing the content of the kotlin-goat database][sqlitebrowser-database]
 
+As discussed before, we can confirm that the passwords are stored in clear text without using any encryption mechanism.
 
 ## Resources
 
