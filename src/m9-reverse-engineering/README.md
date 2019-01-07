@@ -60,16 +60,23 @@ Apktool is a tool allowing to obtain the smali bytecode of the app, which is exe
 
 ```
 
-In order to obtain Java code, an attacker can use [jadx][2] or [jd-gui][3] to decompile the app. Here is an example using [jadx][2] on the kotlin-goat app:
+In order to obtain Java code, an attacker can use [jadx][2] or [jd-gui][3] to decompile the app. 
+Here is an example using [jadx][2] on the kotlin-goat app:
 ![Decompilation of the kotlin-goat app using Jadx][jadx]
 
+As you can see, there is no obfuscation at all on the kotlin-goat app. An attacker is able to easily analyze
+the app in order to understand the inner mechanisms.
 
-In order to slow down the process of reverse engineering, developers use some techniques to obfuscate the code such renaming the variables and name functions with weird names or using a non latin charset.
+In order to slow down the process of reverse engineering, developers use some techniques to obfuscate the code 
+such as renaming the variables and name functions with weird names or using a non latin charset. 
+Here is an example where all the variables and method names were renamed:
+![Android app using obfuscation technique][jadx-obfuscation]
 
-FIXME - add an image with obfuscated code
-
-Different tools can be used to obfuscate the code of your Android app sucha as proguard.
- 
+The most well known tool to perform code obfuscation is [Proguard][4]. 
+Quoting Wikipedia: "ProGuard is an open source command-line tool that shrinks, optimizes and obfuscates Java code. 
+It is able to optimize bytecode as well as detect and remove unused instructions."
+The [Android documentation][6] provides guidance on how to shrink your code and resources. In this [article][7],
+you can find explanations on how to enable Proguard with Android Studio. 
 
 
 ## Resources
@@ -79,15 +86,23 @@ Different tools can be used to obfuscate the code of your Android app sucha as p
 * [apktool][1]
 * [jadx][2]
 * [jd-gui][3]
+* [Proguard][4]
 
 
 ### Readings
-* [M9: OWASP Mobile Top 10 2016] [4]
+* [M9: OWASP Mobile Top 10 2016] [5]
+* [Android documentation: Shrink your code and resources] [6]
+* [Enabling Proguard for Android] [7]
 
 
 [1]: https://github.com/skylot/jadx
 [2]: http://jd.benow.ca/
 [3]: https://ibotpeaches.github.io/Apktool/
-[4]: https://www.owasp.org/index.php/Mobile_Top_10_2016-M9-Reverse_Engineering
+[4]: https://www.guardsquare.com/en/products/proguard
+[5]: https://www.owasp.org/index.php/Mobile_Top_10_2016-M9-Reverse_Engineering
+[6]: https://developer.android.com/studio/build/shrink-code
+[7]: https://medium.com/@maheshwar.ligade/enabling-proguard-for-android-98e2b19e90a4
+
 
 [jadx]: assets/jadx.png
+[jadx-obfuscation]: assets/jadx-obfuscation.png
