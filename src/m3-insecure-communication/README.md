@@ -118,7 +118,7 @@ feature.
 
 * [Certificate Pinning][3]
 * [OkHttp Certificate Pinning][6]
-* [M3: OWASP Mobile Top 10 2016] [9]
+* [OWASP Mobile Top 10 2016: M3 - Insecure Communication][9]
 
 [1]: https://www.wireshark.org/
 [2]: https://portswigger.net/
@@ -129,3 +129,4 @@ feature.
 [7]: https://github.com/square/okhttp
 [8]: http://vps372134.ovh.net:3000/paulo/kotlin-goat/src/feature/m3-insecure-communication
 [9]: https://www.owasp.org/index.php/Mobile_Top_10_2016-M3-Insecure_Communication
+

@@ -181,7 +181,6 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
 Keep in mind that this is just a brief overview over Insecure Authentication.
 Specially if you're doing local authentication you're recommended to carefully
 read sections [M8: Code Tampering][2] and [M9: Reverse Engineering][3]
-packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/SignupActivity.kt#L58
 
 ## Resources
 
@@ -197,7 +196,7 @@ packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/SignupActi
 * [PBKDF2][8]
 * [Argon2][9]
 * [Scrypt][10]
-* [M4: OWASP Mobile Top 10 2016] [14]
+* [OWASP Mobile Top 10 2016: M4 - Insecure Authentication][14]
 
 [1]: https://www.owasp.org/index.php/Authentication_Cheat_Sheet#Implement_Proper_Password_Strength_Controls
 [2]: ../m8-code-tampering/README.md
@@ -213,3 +212,4 @@ packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/SignupActi
 [12]: http://vps372134.ovh.net:3000/paulo/kotlin-goat/src/feature/m4-insecure-authentication/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/SignupActivity.kt#L58
 [13]: http://vps372134.ovh.net:3000/paulo/kotlin-goat/src/feature/m4-insecure-authentication/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/LoginActivity.kt#L225
 [14]: https://www.owasp.org/index.php/Mobile_Top_10_2016-M4-Insecure_Authentication
+

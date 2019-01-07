@@ -77,7 +77,7 @@ Ruleset: style - 4h 10min debt
 * [Kotlin Coding Conventions][4]
 * [Kotlin style guide][5]
 * [Idiomatic Kotlin. Best Practices.][6]
-* [M7: OWASP Mobile Top 10 2016] [7]
+* [OWASP Mobile Top 10 2016: M7 - Client Code Quality][7]
 
 [1]: https://arturbosch.github.io/detekt/
 [2]: https://www.sonarqube.org/
@@ -86,3 +86,4 @@ Ruleset: style - 4h 10min debt
 [5]: https://developer.android.com/kotlin/style-guide
 [6]: https://blog.philipphauer.de/idiomatic-kotlin-best-practices/
 [7]: https://www.owasp.org/index.php/Mobile_Top_10_2016-M7-Poor_Code_Quality
+
