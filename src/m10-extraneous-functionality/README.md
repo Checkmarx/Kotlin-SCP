@@ -10,8 +10,8 @@ actions such as:
   information, etc)
 * Discovering hidden back-end endpoints
 
-In the case of the Kotlin Goat app, a backdoor account is hardcoded inside the
-credentials:
+In the case of the Kotlin Goat app, a backdoor account is hardcoded into the
+code as shown below:
 
 ```kotlin
 inner class UserLoginTask internal constructor(private val mUsername: String,
