@@ -49,9 +49,13 @@ bytecode:
 ```
 
 In order to obtain Java code, an attacker can use [jadx][2] or [jd-gui][3] to
-decompile the app. Here is an example using [jadx][2] on the Kotlin Goat app:
+decompile the app. The video below demonstrates it using [jadx][2] on Kotlin
+Goat
 
-![Decompilation of the Kotlin Goat app using Jadx][jadx]
+<center>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/2pWrF4ryuUo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p><a href="https://www.youtube.com/watch?v=2pWrF4ryuUo">Watch on Youtube</a></p>
+</center>
 
 As you can see, there is no obfuscation at all on the Kotlin Goat app. An
 attacker is able to easily analyze the app in order to understand the inner
@@ -97,4 +101,3 @@ Proguard with Android Studio.
 [7]: https://medium.com/@maheshwar.ligade/enabling-proguard-for-android-98e2b19e90a4
 [jadx]: assets/jadx.png
 [jadx-obfuscation]: assets/jadx-obfuscation.png
-
