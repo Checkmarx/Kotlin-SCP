@@ -14,8 +14,6 @@ attacks.
 Notice that Kotlin has no advantage over plain Java when it comes to avoiding
 reverse engineering.
 
-* @todo movie
-
 Technically, all mobile applications are vulnerable to code tampering but some
 are historically more targeted (e.g. mobile games) than others. Deciding whether
 or not to address this risk is a matter of business impact that can range from
