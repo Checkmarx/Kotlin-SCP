@@ -10,7 +10,7 @@ actions such as:
   information, etc)
 * Discovering hidden back-end endpoints
 
-In the case of the Kotlin Goat app, a backdoor account is hardcoded into the
+In the case of the Goatlin app, a backdoor account is hardcoded into the
 code as shown below:
 
 ```kotlin

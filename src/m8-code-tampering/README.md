@@ -27,7 +27,7 @@ Modification. Generally speaking applications should be able to detect at
 runtime whether code was added or removed to what they know about their
 integrity at compile time.
 
-To address this weakness on our Kotlin Goat we followed OWASP recommendation on
+To address this weakness on our Goatlin app we followed OWASP recommendation on
 Android Root detection. The [`RootDetectionHelper` class][3] implements a few
 techniques such as:
 

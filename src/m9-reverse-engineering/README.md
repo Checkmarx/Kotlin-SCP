@@ -49,11 +49,11 @@ bytecode:
 ```
 
 In order to obtain Java code, an attacker can use [jadx][2] or [jd-gui][3] to
-decompile the app. Here is an example using [jadx][2] on the Kotlin Goat app:
+decompile the app. Here is an example using [jadx][2] on the Goatlin app:
 
-![Decompilation of the Kotlin Goat app using Jadx][jadx]
+![Decompilation of the Goatlin app using Jadx][jadx]
 
-As you can see, there is no obfuscation at all on the Kotlin Goat app. An
+As you can see, there is no obfuscation at all on the Goatlin app. An
 attacker is able to easily analyze the app in order to understand the inner
 mechanisms.
 

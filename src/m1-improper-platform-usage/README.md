@@ -9,7 +9,7 @@ misconfiguration can lead the Android app to leak the data used by the Content
 provider.
 
 When the Content provider is exported, all the apps can query the Content
-provider to retrieve or modify the data. On the Kotlin Goat app, we can identify
+provider to retrieve or modify the data. On the Goatlin app, we can identify
 that a Content provider is defined with the name `.AccountProvider` and the
 exported tag is set to true. Here is an extract of the `AndroidManifest` file:
 
@@ -46,7 +46,7 @@ Row: 0 id=1, username=admin, password=admin
 We can obtain the admin's credentials in this case.
 
 
-Here is another example allowing to add a new account into the Kotlin Goat app:
+Here is another example allowing to add a new account into the Goatlin app:
 
 ```
 $ adb shell content insert --uri content://com.cx.vulnerablekotlinapp.accounts/Accounts  --bind username:s:kotlin --bind password:s:goat

@@ -18,7 +18,7 @@ Keep in mind that encryption depends on secrets (keys) and even the best
 encryption algorithm will be worthless if your application fails to keep its
 secrets, making the keys available to the attacker.
 
-In the movie below you'll see how our Kotlin application cryptography fails
+In the movie below you'll see how our Goatlin app cryptography fails
 enabling the adversary to get the unencrypted version of stored data.
 
 <center>
