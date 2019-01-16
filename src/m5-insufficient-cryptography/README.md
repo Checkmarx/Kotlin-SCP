@@ -103,10 +103,9 @@ the message. Note that IV is not secret.
 [2]: https://developer.android.com/training/articles/keystore
 [3]: https://medium.com/@josiassena/using-the-android-keystore-system-to-store-sensitive-information-3a56175a454b
 [4]: https://medium.com/@ericfu/securely-storing-secrets-in-an-android-application-501f030ae5a3
-[5]: http://vps372134.ovh.net:3000/paulo/kotlin-goat/src/feature/m5-insufficient-cryptography/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/CryptoHelper.kt
-[6]: http://vps372134.ovh.net:3000/paulo/kotlin-goat/src/feature/m5-insufficient-cryptography/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/SignupActivity.kt#L63
-[7]: http://vps372134.ovh.net:3000/paulo/kotlin-goat/src/feature/m5-insufficient-cryptography/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/CryptoHelper.kt#L35
+[5]: https://github.com/PauloASilva/KotlinGoat/blob/feature/m5-insufficient-cryptography/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/CryptoHelper.kt
+[6]: https://github.com/PauloASilva/KotlinGoat/blob/feature/m5-insufficient-cryptography/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/SignupActivity.kt#L63
+[7]: https://github.com/PauloASilva/KotlinGoat/blob/feature/m5-insufficient-cryptography/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/CryptoHelper.kt#L35
 [8]: https://en.wikipedia.org/wiki/Initialization_vector
 [9]: https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.Builder.html#setRandomizedEncryptionRequired(boolean)
 [10]: https://www.owasp.org/index.php/Mobile_Top_10_2016-M5-Insufficient_Cryptography
-

@@ -127,6 +127,5 @@ feature.
 [5]: https://letsencrypt.org/docs/
 [6]: https://github.com/square/okhttp/wiki/HTTPS#certificate-pinning
 [7]: https://github.com/square/okhttp
-[8]: http://vps372134.ovh.net:3000/paulo/kotlin-goat/src/feature/m3-insecure-communication
+[8]: https://github.com/PauloASilva/KotlinGoat/tree/feature/m3-insecure-communication
 [9]: https://www.owasp.org/index.php/Mobile_Top_10_2016-M3-Insecure_Communication
-

@@ -179,4 +179,3 @@ without using any encryption mechanism.
 [6]: https://www.owasp.org/index.php/Mobile_Top_10_2016-M2-Insecure_Data_Storage
 [7]: https://developer.android.com/guide/topics/data/data-storage
 [sqlitebrowser-database]: assets/sqlitebrowser-database.png
-

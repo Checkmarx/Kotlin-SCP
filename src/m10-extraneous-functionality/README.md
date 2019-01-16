@@ -96,4 +96,3 @@ protected Boolean doInBackground(@NotNull Void... params) {
 [2]: http://jd.benow.ca/
 [3]: https://ibotpeaches.github.io/Apktool/
 [4]: https://www.owasp.org/index.php/Mobile_Top_10_2016-M10-Extraneous_Functionality
-

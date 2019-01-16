@@ -130,4 +130,3 @@ Interaction] [6] section.
 [7]: https://www.owasp.org/index.php/Mobile_Top_10_2016-M1-Improper_Platform_Usage
 [8]: ../m5-insufficient-cryptography
 [9]: https://developer.android.com/studio/command-line/adb
-

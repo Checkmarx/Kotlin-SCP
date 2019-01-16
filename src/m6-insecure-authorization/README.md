@@ -27,8 +27,8 @@ Goatlin app.
 </center>
 
 Insecure Authorization in our Goatlin app is clearly a back-end issue.
-Although API routes include *authentication* middleware when appropriate, no
-permissions (authorization) are validated
+Although [API routes][1] include [**authentication** middleware][2] when
+appropriate, no permissions (authorization) are validated
 
 ```javascript
 router.put('/accounts/:username/notes/:note', auth, async (req, res, next) => {
@@ -79,12 +79,11 @@ router.get('/accounts/:username/notes', [auth, ownership], async (req, res, next
 * [Using middleware - Express][7]
 * [OWASP Mobile Top 10 2016: M6 - Insecure Authorization][8]
 
-[1]: http://vps372134.ovh.net:3000/paulo/kotlin-goat/src/develop/packages/services/api/src/routes/accounts.js#L29
-[2]: http://vps372134.ovh.net:3000/paulo/kotlin-goat/src/develop/packages/services/api/src/middleware/auth.js#L3
-[3]: http://vps372134.ovh.net:3000/paulo/kotlin-goat/src/develop/packages/services/api/src/middleware/ownership.js
+[1]: https://github.com/PauloASilva/KotlinGoat/blob/master/packages/services/api/src/routes/accounts.js#L29
+[2]: https://github.com/PauloASilva/KotlinGoat/blob/master/packages/services/api/src/middleware/auth.js
+[3]: https://github.com/PauloASilva/KotlinGoat/blob/feature/m6-insecure-authorization/packages/services/api/src/middleware/ownership.js
 [4]: https://www.owasp.org/index.php/Mobile_Top_10_2016-M6-Insecure_Authorization
 [5]: https://www.owasp.org/index.php/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet
 [6]: https://www.owasp.org/index.php/Testing_for_Insecure_Direct_Object_References_(OTG-AUTHZ-004)
 [7]: https://expressjs.com/en/guide/using-middleware.html
 [8]: https://www.owasp.org/index.php/Mobile_Top_10_2016-M6-Insecure_Authorization
-

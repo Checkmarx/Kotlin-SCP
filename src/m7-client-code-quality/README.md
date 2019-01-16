@@ -86,4 +86,3 @@ Ruleset: style - 4h 10min debt
 [5]: https://developer.android.com/kotlin/style-guide
 [6]: https://blog.philipphauer.de/idiomatic-kotlin-best-practices/
 [7]: https://www.owasp.org/index.php/Mobile_Top_10_2016-M7-Poor_Code_Quality
-

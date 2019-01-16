@@ -201,15 +201,14 @@ read sections [M8: Code Tampering][2] and [M9: Reverse Engineering][3]
 [1]: https://www.owasp.org/index.php/Authentication_Cheat_Sheet#Implement_Proper_Password_Strength_Controls
 [2]: ../m8-code-tampering/README.md
 [3]: ../m9-reverse-engineering/README.md
-[4]: http://vps372134.ovh.net:3000/paulo/kotlin-goat/src/feature/m4-insecure-authentication/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/PasswordHelper.kt
-[5]: hhttp://vps372134.ovh.net:3000/paulo/kotlin-goat/src/feature/m4-insecure-authentication/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/SignupActivity.kt#L42
+[4]: https://github.com/PauloASilva/KotlinGoat/blob/feature/m4-insecure-authentication/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/PasswordHelper.kt
+[5]: https://github.com/PauloASilva/KotlinGoat/blob/feature/m4-insecure-authentication/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/SignupActivity.kt#L42
 [6]: https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet#Leverage_an_adaptive_one-way_function
 [7]: https://en.wikipedia.org/wiki/Bcrypt
 [8]: https://en.wikipedia.org/wiki/PBKDF2
 [9]: https://en.wikipedia.org/wiki/Argon2
 [10]: https://en.wikipedia.org/wiki/Scrypt
 [11]: http://www.mindrot.org/projects/jBCrypt/
-[12]: http://vps372134.ovh.net:3000/paulo/kotlin-goat/src/feature/m4-insecure-authentication/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/SignupActivity.kt#L58
-[13]: http://vps372134.ovh.net:3000/paulo/kotlin-goat/src/feature/m4-insecure-authentication/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/LoginActivity.kt#L225
+[12]: https://github.com/PauloASilva/KotlinGoat/blob/feature/m4-insecure-authentication/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/SignupActivity.kt#L58
+[13]: https://github.com/PauloASilva/KotlinGoat/blob/feature/m4-insecure-authentication/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/LoginActivity.kt#L225
 [14]: https://www.owasp.org/index.php/Mobile_Top_10_2016-M4-Insecure_Authentication
-
