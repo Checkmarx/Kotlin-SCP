@@ -26,8 +26,8 @@ The movie below shows Insecure Authentication exploitation on our Goatlin
 app.
 
 <center>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z6f81ibmsk4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <p><a href="https://www.youtube.com/watch?v=Z6f81ibmsk4">Watch the video on Youtube</a></p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/qJO2A2uox1E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p><a href="https://www.youtube.com/watch?v=qJO2A2uox1E">Watch the video on Youtube</a></p>
 </center>
 
 Now it is time to improve the application establishing a strong password policy

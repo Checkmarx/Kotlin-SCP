@@ -22,8 +22,8 @@ In the movie below you'll see how our Goatlin app cryptography fails
 enabling the adversary to get the unencrypted version of stored data.
 
 <center>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/yPB6nun8sxs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <p><a href="https://www.youtube.com/watch?v=yPB6nun8sxs">Watch on Youtube</a></p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/FbIj2hBMeaE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p><a href="https://www.youtube.com/watch?v=FbIj2hBMeaE">Watch on Youtube</a></p>
 </center>
 
 To address Insecure Cryptography we will replace the encryption algorithm by the

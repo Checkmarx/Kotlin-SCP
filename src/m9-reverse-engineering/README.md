@@ -53,8 +53,8 @@ decompile the app. The video below demonstrates it using [jadx][2] on Goatlin
 app:
 
 <center>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/2pWrF4ryuUo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <p><a href="https://www.youtube.com/watch?v=2pWrF4ryuUo">Watch on Youtube</a></p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/8b882SulnQA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p><a href="https://www.youtube.com/watch?v=8b882SulnQA">Watch on Youtube</a></p>
 </center>
 
 

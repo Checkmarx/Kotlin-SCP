@@ -22,8 +22,8 @@ The movie below demonstrates how Insecure Authorization can be exploited on our
 Goatlin app.
 
 <center>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/srClSqFM-pE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <p><a href="https://www.youtube.com/watch?v=srClSqFM-pE">Watch on Youtube</a></p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/vsyTMpRnFtA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p><a href="https://www.youtube.com/watch?v=vsyTMpRnFtA">Watch on Youtube</a></p>
 </center>
 
 Insecure Authorization in our Goatlin app is clearly a back-end issue.
