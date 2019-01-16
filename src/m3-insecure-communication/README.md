@@ -11,7 +11,7 @@ then an adversary will be able not only to steal the data but also to play
 Man-in-the-Middle (MitM) attacks.
 
 The following video demonstrates Insecure Communications exploitation on our
-Goatlin mobile application. The movie starts with network monitoring, what gives
+Kotlin mobile application. The movie starts with network monitoring, what gives
 adversary access to exchanged data and then, in the second part, application's
 network traffic will be actually modified.
 
@@ -31,7 +31,7 @@ Nowadays you can get free certificates with [Let's Encrypt][4] - a free,
 automated and open Certificate Authority. Following the [documentation you'll
 get them deployed easily][5].
 
-On our Goatlin app we'll go with a self-signed certificate. While this is a
+On our Kotlin goat we'll go with a self-signed certificate. While this is a
 common practice during development stage, it is not recommended for production
 systems. How to generate the certificate is out of scope of this guide.
 
@@ -63,7 +63,7 @@ var server = https.createServer(credentials, app);
 ```
 
 The following command line outputs our certificate fingerprint so that we can
-pin it on our Goatlin app:
+pin it on our Kotlin goat
 
 ```
 openssl x509 -in server.crt -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
@@ -102,7 +102,7 @@ interface Client {
 
 You can test Certificate Pinning switching to
 [feature/m3-insecure-communication branch][8]. Replacing the back-end API
-certificates or the fingerprint on Goatlin source code will break the signup
+certificates or the fingerprint on Kotlin goat source code will break the signup
 feature.
 
 ## Resources

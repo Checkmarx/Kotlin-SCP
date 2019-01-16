@@ -20,11 +20,11 @@ quality issues to be solved.
 the [Apache License 2.0][3]. It provides several integration mechanism such as
 a Gradle plugin and a SonarQube integration, but it can also run standalone.
 
-Running Detekt on our Goatlin source code we get several code quality
-indicators:
+Running Detekt on our Kotlin goat source goat we get several code quality
+indicators
 
 ```
-$ java -jar detekt-cli/build/libs/detekt-cli-1.0.0-RC12-all.jar -r txt:/tmp/goatlin.txt -i ~/Projects/char49/goatlin/packages/clients/android/
+$ java -jar detekt-cli/build/libs/detekt-cli-1.0.0-RC12-all.jar -r txt:/tmp/kotlin-goat.txt -i ~/Projects/char49/kotlin/goat/packages/clients/android/
 
 Overall debt: 7h
 
@@ -52,17 +52,17 @@ most relevant
 
 ```
 Ruleset: complexity - 40min debt
-        TooManyFunctions - 15/11 - [DatabaseHelper] at /home/pauloasilva/Projects/char49/goatlin/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/DatabaseHelper.kt:16:1
-        ComplexMethod - 15/10 - [showProgress] at /home/pauloasilva/Projects/char49/goatlin/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/LoginActivity.kt:126:5
+        TooManyFunctions - 15/11 - [DatabaseHelper] at /home/pauloasilva/Projects/char49/kotlin/goat/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/DatabaseHelper.kt:16:1
+        ComplexMethod - 15/10 - [showProgress] at /home/pauloasilva/Projects/char49/kotlin/goat/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/LoginActivity.kt:126:5
 Ruleset: exceptions - 1h 40min debt
-        TooGenericExceptionCaught - [exception] at /home/pauloasilva/Projects/char49/goatlin/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/DatabaseHelper.kt:46:18
-        TooGenericExceptionThrown - [installDatabaseFromAssets] at /home/pauloasilva/Projects/char49/goatlin/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/DatabaseHelper.kt:47:13
-        TooGenericExceptionThrown - [getAccount] at /home/pauloasilva/Projects/char49/goatlin/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/DatabaseHelper.kt:91:13
-        TooGenericExceptionThrown - [getNote] at /home/pauloasilva/Projects/char49/goatlin/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/DatabaseHelper.kt:165:13
-        TooGenericExceptionCaught - [e] at /home/pauloasilva/Projects/char49/goatlin/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/EditNoteActivity.kt:67:20
+        TooGenericExceptionCaught - [exception] at /home/pauloasilva/Projects/char49/kotlin/goat/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/DatabaseHelper.kt:46:18
+        TooGenericExceptionThrown - [installDatabaseFromAssets] at /home/pauloasilva/Projects/char49/kotlin/goat/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/DatabaseHelper.kt:47:13
+        TooGenericExceptionThrown - [getAccount] at /home/pauloasilva/Projects/char49/kotlin/goat/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/DatabaseHelper.kt:91:13
+        TooGenericExceptionThrown - [getNote] at /home/pauloasilva/Projects/char49/kotlin/goat/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/DatabaseHelper.kt:165:13
+        TooGenericExceptionCaught - [e] at /home/pauloasilva/Projects/char49/kotlin/goat/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/EditNoteActivity.kt:67:20
 Ruleset: style - 4h 10min debt
-        MagicNumber - [lowerBoundary] at /home/pauloasilva/Projects/char49/goatlin/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/CryptoHelper.kt:12:63
-        WildcardImport - [LoginActivity.kt] at /home/pauloasilva/Projects/char49/goatlin/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/LoginActivity.kt:20:1
+        MagicNumber - [lowerBoundary] at /home/pauloasilva/Projects/char49/kotlin/goat/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/CryptoHelper.kt:12:63
+        WildcardImport - [LoginActivity.kt] at /home/pauloasilva/Projects/char49/kotlin/goat/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/LoginActivity.kt:20:1
 ```
 
 ## Resources

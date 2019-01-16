@@ -22,8 +22,8 @@ can be bypassed and the system will fail to identify the user and log its
 sensitive functionalities as the system will also fail to validate its role,
 highlighting also problems with the authorization controls.
 
-The movie below shows Insecure Authentication exploitation on our Goatlin
-app.
+The movie below shows Insecure Authentication exploitation on our Kotlin
+application.
 
 <center>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/qJO2A2uox1E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -87,8 +87,8 @@ object PasswordHelper {
 }
 ```
 
-`PasswordHelper.strength()` is then called from `signupAttempt()` on our Goatlin
-`SignupActivity` ([source][5])
+`PasswordHelper.strength()` is then called from `signupAttempt()` on our Kotlin
+goat `SignupActivity` ([source][5])
 
 ```kotlin
 package com.cx.vulnerablekotlinapp
@@ -131,7 +131,7 @@ The advantage of `bcrypt` is that it is simpler to use and is therefore less
 error-prone.
 
 After adding [jBCrypt][11] as dependency to have access to a `bcrypt`
-implementation, we just need two little changes to our Goatlin app. First in the
+implementation, we just need two little changes to our Kotlin goat. First in the
 `attemptLoggin()` method of `SignupActivity` so that passwords are exchanged
 stored as a salted hash ([source][12])
 
