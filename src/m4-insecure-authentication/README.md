@@ -24,10 +24,7 @@ highlighting also problems with the authorization controls.
 
 The movie below shows [Kotlin Goat][0] authentication exploitation
 
-<center>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/qJO2A2uox1E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <p><a href="https://www.youtube.com/watch?v=qJO2A2uox1E">Watch the video on Youtube</a></p>
-</center>
+{% youtube src="https://www.youtube.com/watch?v=qJO2A2uox1E" %}{% endyoutube %}
 
 Now it is time to improve the application establishing a strong password policy
 and storing authentication data safely: we will keep authentication data locally
@@ -189,8 +186,7 @@ read sections [M8: Code Tampering][2] and [M9: Reverse Engineering][3]
 
 ### Reading
 
-* [OWASP Authentication Cheat Sheet: Implement Proper Password Strength
-  Controls][1]
+* [OWASP Authentication Cheat Sheet: Implement Proper Password Strength Controls][1]
 * [BCrypt][7]
 * [PBKDF2][8]
 * [Argon2][9]
