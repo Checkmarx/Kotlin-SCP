@@ -21,10 +21,7 @@ secrets, making the keys available to the attacker.
 In the movie below you'll see how [Kotlin Goat][0] cryptography fails, enabling
 the adversary to get the unencrypted version of stored data.
 
-<center>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/FbIj2hBMeaE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <p><a href="https://www.youtube.com/watch?v=FbIj2hBMeaE">Watch on Youtube</a></p>
-</center>
+{% youtube src="https://www.youtube.com/watch?v=FbIj2hBMeaE" %}{% endyoutube %}
 
 To address Insecure Cryptography we will replace the encryption algorithm by the
 [AES - Advanced Encrypt Standard (Rijndael)][1]. As many other symmetric

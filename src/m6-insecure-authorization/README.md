@@ -21,10 +21,7 @@ likely vulnerable to Insecure Authorization.
 The movie below demonstrates how Insecure Authorization can be exploited on 
 [Kotlin Goat][0].
 
-<center>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/vsyTMpRnFtA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <p><a href="https://www.youtube.com/watch?v=vsyTMpRnFtA">Watch on Youtube</a></p>
-</center>
+{% youtube src="https://www.youtube.com/watch?v=vsyTMpRnFtA" %}{% endyoutube %}
 
 Insecure Authorization in [Kotlin Goat][0] is clearly a back-end issue.
 Although [API routes][1] include [**authentication** middleware][2] when
