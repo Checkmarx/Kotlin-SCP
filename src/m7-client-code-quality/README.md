@@ -20,8 +20,7 @@ quality issues to be solved.
 the [Apache License 2.0][3]. It provides several integration mechanism such as
 a Gradle plugin and a SonarQube integration, but it can also run standalone.
 
-Running Detekt on our Kotlin goat source goat we get several code quality
-indicators
+Running Detekt on [Kotlin Goat][0] source code results as bellow
 
 ```
 $ java -jar detekt-cli/build/libs/detekt-cli-1.0.0-RC12-all.jar -r txt:/tmp/kotlin-goat.txt -i ~/Projects/char49/kotlin/goat/packages/clients/android/
@@ -79,6 +78,7 @@ Ruleset: style - 4h 10min debt
 * [Idiomatic Kotlin. Best Practices.][6]
 * [OWASP Mobile Top 10 2016: M7 - Client Code Quality][7]
 
+[0]: https://github.com/PauloASilva/KotlinGoat
 [1]: https://arturbosch.github.io/detekt/
 [2]: https://www.sonarqube.org/
 [3]: https://www.apache.org/licenses/LICENSE-2.0

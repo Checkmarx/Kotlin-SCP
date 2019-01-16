@@ -20,7 +20,7 @@ text. For instance, it is frequent to find API keys, passwords, Personally
 Identifiable Information (PII) stored on the Shared Preferences or databases
 used by the app.
 
-In the case of the Kotlin Goat app, when a user performs a sign up, the
+In the case of the [Kotlin Goat app][0], when a user performs a sign up, the
 credentials are stored locally inside the database. Here is the extract of the
 SignupActivity class showing the creation of the account and how it is stored
 into the database:
@@ -79,7 +79,8 @@ private fun attemptSignup() {
 
 When the app receives a response from the back-end with the HTTP code 201, the
 function `createLocalAccount()` is called.
-As shown below, this function only add the username and password into the database:
+As shown below, this function only adds the username and password into the
+database:
 
 ```kotlin
 /**
@@ -171,6 +172,7 @@ without using any encryption mechanism.
 * [OWASP Mobile Top 10 2016: M2 - Insecure Data Storage][6]
 * [OWASP Mobile Security Testing guide - Test Data Storage] [5]
 
+[0]: https://github.com/PauloASilva/KotlinGoat
 [1]: https://github.com/skylot/jadx
 [2]: http://jd.benow.ca/
 [3]: https://ibotpeaches.github.io/Apktool/

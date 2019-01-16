@@ -10,10 +10,10 @@ exploiting a Wi-Fi network is certainly easier. If communications lack SSL/TLS,
 then an adversary will be able not only to steal the data but also to play
 Man-in-the-Middle (MitM) attacks.
 
-The following video demonstrates Insecure Communications exploitation on our
-Kotlin mobile application. The movie starts with network monitoring, what gives
-adversary access to exchanged data and then, in the second part, application's
-network traffic will be actually modified.
+The following video demonstrates Insecure Communications exploitation on [Kotlin
+Goat][0] mobile application. The movie shows network monitoring, what gives
+adversary access to exchanged data nevertheless, due to insecure communication,
+Man-in-the-Middle (MitM) would also be possible.
 
 <center>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/0onwBnAvWI4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -31,7 +31,7 @@ Nowadays you can get free certificates with [Let's Encrypt][4] - a free,
 automated and open Certificate Authority. Following the [documentation you'll
 get them deployed easily][5].
 
-On our Kotlin goat we'll go with a self-signed certificate. While this is a
+On [Kotlin Goat][0] we'll go with a self-signed certificate. While this is a
 common practice during development stage, it is not recommended for production
 systems. How to generate the certificate is out of scope of this guide.
 
@@ -63,7 +63,7 @@ var server = https.createServer(credentials, app);
 ```
 
 The following command line outputs our certificate fingerprint so that we can
-pin it on our Kotlin goat
+pin it on [Kotlin Goat][0]
 
 ```
 openssl x509 -in server.crt -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
@@ -102,8 +102,8 @@ interface Client {
 
 You can test Certificate Pinning switching to
 [feature/m3-insecure-communication branch][8]. Replacing the back-end API
-certificates or the fingerprint on Kotlin goat source code will break the signup
-feature.
+certificates or the fingerprint on [Kotlin Goat][0] source code will break the
+signup feature.
 
 ## Resources
 
@@ -120,6 +120,7 @@ feature.
 * [OkHttp Certificate Pinning][6]
 * [OWASP Mobile Top 10 2016: M3 - Insecure Communication][9]
 
+[0]: https://github.com/PauloASilva/KotlinGoat
 [1]: https://www.wireshark.org/
 [2]: https://portswigger.net/
 [3]: https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning

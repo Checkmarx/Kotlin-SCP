@@ -9,9 +9,10 @@ misconfiguration can lead the Android app to leak the data used by the Content
 provider.
 
 When the Content provider is exported, all the apps can query the Content
-provider to retrieve or modify the data. On the Kotlin Goat app, we can identify
-that a Content provider is defined with the name `.AccountProvider` and the
-exported tag is set to true. Here is an extract of the `AndroidManifest` file:
+provider to retrieve or modify the data. On the [Kotlin Goat app][0], we can
+identify that a Content provider is defined with the name `.AccountProvider` and
+the exported tag is set to true. Here is an extract of the `AndroidManifest`
+file:
 
 ```xml
 <provider
@@ -101,9 +102,12 @@ For this provider, we can observe that the notes are not stored in clear text
 This encryption mechanism is further analyzed in the [M5: Insufficient
 Cryptography][8] section.
 
+This issue was fixed on [Kotlin Goat][0]: you can find it on
+[feature/m1-improper-platform-usage branch][10].
+
 More information about how to test improper platform usage can be found on the
 [OWASP Mobile Testing Guide][5] and especially on the [Testing Platorm
-Interaction] [6] section.
+Interaction][6] section.
 
 ## Resources
 
@@ -121,6 +125,7 @@ Interaction] [6] section.
 * [OWASP Mobile Testing Guide][5]
 * [OWASP Mobile Top 10 2016: M1 - Improper Platform Usage][7]
 
+[0]: https://github.com/PauloASilva/KotlinGoat
 [1]: https://github.com/skylot/jadx
 [2]: http://jd.benow.ca/
 [3]: https://ibotpeaches.github.io/Apktool/
@@ -130,3 +135,4 @@ Interaction] [6] section.
 [7]: https://www.owasp.org/index.php/Mobile_Top_10_2016-M1-Improper_Platform_Usage
 [8]: ../m5-insufficient-cryptography
 [9]: https://developer.android.com/studio/command-line/adb
+[10]: https://github.com/PauloASilva/KotlinGoat/tree/feature/m1-improper-platform-usage

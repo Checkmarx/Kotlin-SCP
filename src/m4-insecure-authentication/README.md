@@ -22,8 +22,7 @@ can be bypassed and the system will fail to identify the user and log its
 sensitive functionalities as the system will also fail to validate its role,
 highlighting also problems with the authorization controls.
 
-The movie below shows Insecure Authentication exploitation on our Kotlin
-application.
+The movie below shows [Kotlin Goat][0] authentication exploitation
 
 <center>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/qJO2A2uox1E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -87,8 +86,8 @@ object PasswordHelper {
 }
 ```
 
-`PasswordHelper.strength()` is then called from `signupAttempt()` on our Kotlin
-goat `SignupActivity` ([source][5])
+`PasswordHelper.strength()` is then called from `signupAttempt()` on Kotlin Goat
+`SignupActivity` ([source][5])
 
 ```kotlin
 package com.cx.vulnerablekotlinapp
@@ -131,8 +130,8 @@ The advantage of `bcrypt` is that it is simpler to use and is therefore less
 error-prone.
 
 After adding [jBCrypt][11] as dependency to have access to a `bcrypt`
-implementation, we just need two little changes to our Kotlin goat. First in the
-`attemptLoggin()` method of `SignupActivity` so that passwords are exchanged
+implementation, we just need to make two little changes to [Kotlin Goat][0].
+First in the `attemptSignup()` method of `SignupActivity` so that passwords are
 stored as a salted hash ([source][12])
 
 ```kotlin
@@ -198,6 +197,7 @@ read sections [M8: Code Tampering][2] and [M9: Reverse Engineering][3]
 * [Scrypt][10]
 * [OWASP Mobile Top 10 2016: M4 - Insecure Authentication][14]
 
+[0]: https://github.com/PauloASilva/KotlinGoat
 [1]: https://www.owasp.org/index.php/Authentication_Cheat_Sheet#Implement_Proper_Password_Strength_Controls
 [2]: ../m8-code-tampering/README.md
 [3]: ../m9-reverse-engineering/README.md

@@ -10,8 +10,8 @@ actions such as:
   information, etc)
 * Discovering hidden back-end endpoints
 
-In the case of the Kotlin Goat app, a backdoor account is hardcoded into the
-code as shown below:
+In the case of the [Kotlin Goat][0] app, a backdoor account is hardcoded into
+the code as shown below:
 
 ```kotlin
 inner class UserLoginTask internal constructor(private val mUsername: String,
@@ -92,6 +92,7 @@ protected Boolean doInBackground(@NotNull Void... params) {
 
 * [OWASP Mobile Top 10 2016: M10 - Extraneous Functionality][4]
 
+[0]: https://github.com/PauloASilva/KotlinGoat
 [1]: https://github.com/skylot/jadx
 [2]: http://jd.benow.ca/
 [3]: https://ibotpeaches.github.io/Apktool/

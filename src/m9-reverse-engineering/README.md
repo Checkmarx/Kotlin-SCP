@@ -49,15 +49,15 @@ bytecode:
 ```
 
 In order to obtain Java code, an attacker can use [jadx][2] or [jd-gui][3] to
-decompile the app. The video below demonstrates it using [jadx][2] on Kotlin
-goat
+decompile the app. The video below demonstrates it using [jadx][2] on [Kotlin
+Goat][0]
 
 <center>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/8b882SulnQA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <p><a href="https://www.youtube.com/watch?v=8b882SulnQA">Watch on Youtube</a></p>
 </center>
 
-As you can see, there is no obfuscation at all on the Kotlin Goat. An
+As you can see, there is no obfuscation at all on the [Kotlin Goat][0]. An
 attacker is able to easily analyze the app in order to understand the inner
 mechanisms.
 
@@ -92,6 +92,7 @@ Proguard with Android Studio.
 * [Enabling Proguard for Android][7]
 * [OWASP Mobile Top 10 2016: M9 - Reverse Engineering][5]
 
+[0]: https://github.com/PauloASilva/KotlinGoat
 [1]: https://github.com/skylot/jadx
 [2]: http://jd.benow.ca/
 [3]: https://ibotpeaches.github.io/Apktool/
@@ -99,5 +100,4 @@ Proguard with Android Studio.
 [5]: https://www.owasp.org/index.php/Mobile_Top_10_2016-M9-Reverse_Engineering
 [6]: https://developer.android.com/studio/build/shrink-code
 [7]: https://medium.com/@maheshwar.ligade/enabling-proguard-for-android-98e2b19e90a4
-[jadx]: assets/jadx.png
 [jadx-obfuscation]: assets/jadx-obfuscation.png

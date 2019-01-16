@@ -18,15 +18,15 @@ will be accessed only by someone with the right role. If the mobile application
 sends the user role or permissions to the back-end as part of the request, it is
 likely vulnerable to Insecure Authorization.
 
-The movie below demonstrates how Insecure Authorization can be exploited on our
-Kotlin goat.
+The movie below demonstrates how Insecure Authorization can be exploited on 
+[Kotlin Goat][0].
 
 <center>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/vsyTMpRnFtA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <p><a href="https://www.youtube.com/watch?v=vsyTMpRnFtA">Watch on Youtube</a></p>
 </center>
 
-Insecure Authorization in our Kotlin goat is clearly a back-end issue.
+Insecure Authorization in [Kotlin Goat][0] is clearly a back-end issue.
 Although [API routes][1] include [**authentication** middleware][2] when
 appropriate, no permissions (authorization) are validated
 
@@ -69,20 +69,17 @@ router.get('/accounts/:username/notes', [auth, ownership], async (req, res, next
 
 ## Resources
 
-### Tools
-
 ### Readings
 
-* [OWASP Mobile Top 10 2016-M6-Insecure Authorization][4]
 * [Insecure Direct Object Reference Prevention Cheat Sheet][5]
 * [Testing for Insecure Direct Object References (OTG-AUTHZ-004)][6]
 * [Using middleware - Express][7]
 * [OWASP Mobile Top 10 2016: M6 - Insecure Authorization][8]
 
+[0]: https://github.com/PauloASilva/KotlinGoat
 [1]: https://github.com/PauloASilva/KotlinGoat/blob/master/packages/services/api/src/routes/accounts.js#L29
 [2]: https://github.com/PauloASilva/KotlinGoat/blob/master/packages/services/api/src/middleware/auth.js
 [3]: https://github.com/PauloASilva/KotlinGoat/blob/feature/m6-insecure-authorization/packages/services/api/src/middleware/ownership.js
-[4]: https://www.owasp.org/index.php/Mobile_Top_10_2016-M6-Insecure_Authorization
 [5]: https://www.owasp.org/index.php/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet
 [6]: https://www.owasp.org/index.php/Testing_for_Insecure_Direct_Object_References_(OTG-AUTHZ-004)
 [7]: https://expressjs.com/en/guide/using-middleware.html

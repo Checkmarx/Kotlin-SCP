@@ -18,8 +18,8 @@ Keep in mind that encryption depends on secrets (keys) and even the best
 encryption algorithm will be worthless if your application fails to keep its
 secrets, making the keys available to the attacker.
 
-In the movie below you'll see how our Kotlin application cryptography fails
-enabling the adversary to get the unencrypted version of stored data.
+In the movie below you'll see how [Kotlin Goat][0] cryptography fails, enabling
+the adversary to get the unencrypted version of stored data.
 
 <center>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/FbIj2hBMeaE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -34,7 +34,7 @@ former is an authenticated cipher mode, meaning that after the encryption stage,
 an authentication tag is added to the ciphertext, which will then be validated
 prior to message decryption, ensuring the message has not been tampered with.
 
-All major changes were done in the [CryptoHelper class][7] which was given two
+All major changes were done in the [CryptoHelper class][5] which was given two
 new methods: `createUserKey()` and `getUserKey()`. `encrypt()` and `decrypt()`
 methods were also changed to receive a `usernane` argument.
 
@@ -54,7 +54,7 @@ class CryptoHelper {
 As said before encryption depends on secrets (keys), which should be handled
 carefully. In this case, on successful signup, a random key is created and 
 persisted in [Android Keystore][2]: this key is user specific (see
-[SignupActivity][6]) and is used to encrypt/decrypt user's notes only.
+[SignupActivity][6]) and it is used to encrypt/decrypt user's notes only.
 
 Every time encryption/decryption is required, the `username` should be provided
 to the appropriate `CryptoHelper` method as it is used as alias to located
@@ -90,8 +90,6 @@ the message. Note that IV is not secret.
 
 ## Resources
 
-### Tools
-
 ### Readings
 
 * [Android Keystore System][2]
@@ -99,6 +97,7 @@ the message. Note that IV is not secret.
 * [Securely Storing Secrets in an Android Application][4]
 * [OWASP Mobile Top 10 2016: M5 - Insufficient Cryptography][10]
 
+[0]: https://github.com/PauloASilva/KotlinGoat
 [1]: https://en.wikipedia.org/wiki/Advanced_Encryption_Standard
 [2]: https://developer.android.com/training/articles/keystore
 [3]: https://medium.com/@josiassena/using-the-android-keystore-system-to-store-sensitive-information-3a56175a454b
