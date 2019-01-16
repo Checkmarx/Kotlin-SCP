@@ -34,10 +34,10 @@ preview the book.
 
 ## How to start
 
-1. fork [kotlin-scp repository][8];
+1. fork [Kotlin-SCP repository][8];
 2. clone your fork;
    ```
-   git clone git@github.com:[YOUR-USERNAME]/kotlin-scp.git
+   git clone git@github.com:[YOUR-USERNAME]/Kotlin-SCP.git
    ```
 3. enter your local copy
    ```
@@ -97,4 +97,4 @@ the upstream ones.
 [5]: http://daringfireball.net/projects/markdown
 [6]: https://github.com/GitbookIO/gitbook-cli
 [7]: https://nodejs.org/
-[8]: https://github.com/Checkmarx/kotlin-scp
+[8]: https://github.com/Checkmarx/Kotlin-SCP

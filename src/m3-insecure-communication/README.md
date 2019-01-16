@@ -15,10 +15,7 @@ Goat][0] mobile application. The movie shows network monitoring, what gives
 adversary access to exchanged data nevertheless, due to insecure communication,
 Man-in-the-Middle (MitM) would also be possible.
 
-<center>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/0onwBnAvWI4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <p><a href="https://www.youtube.com/watch?v=0onwBnAvWI4">Watch the video on Youtube</a></p>
-</center>
+{% youtube src="https://www.youtube.com/watch?v=0onwBnAvWI4" %}{% endyoutube %}
 
 Now that we have seen the exploitation taking place, it's time to go back to
 application source code and fix this issue. We will add SSL/TLS to all
