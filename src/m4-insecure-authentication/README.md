@@ -186,8 +186,7 @@ read sections [M8: Code Tampering][2] and [M9: Reverse Engineering][3]
 
 ### Reading
 
-* [OWASP Authentication Cheat Sheet: Implement Proper Password Strength
-  Controls][1]
+* [OWASP Authentication Cheat Sheet: Implement Proper Password Strength Controls][1]
 * [BCrypt][7]
 * [PBKDF2][8]
 * [Argon2][9]
