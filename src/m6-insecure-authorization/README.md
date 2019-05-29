@@ -2,10 +2,10 @@ M6: Insecure Authorization
 ==========================
 
 It is important to distinguish between authentication and authorization: the
-former is the act of identifying an individual whilst the later is the act of
+former is the act of identifying an individual whereas the later is the act of
 checking that the identified individual has the necessary permissions to perform
-the act. To exploit Insecure Authorization, usually adversaries first login to
-the application as a legitimate user and then they typically force-browse to a
+the act. To exploit Insecure Authorization, adversaries usually log in to the
+application as a legitimate user first, then they typically force-browse to a
 vulnerable endpoint.
 
 Because authentication precedes authorization, if an application fails to
@@ -25,7 +25,7 @@ The movie below demonstrates how Insecure Authorization can be exploited on
 
 Insecure Authorization in [Kotlin Goat][0] is clearly a back-end issue.
 Although [API routes][1] include [**authentication** middleware][2] when
-appropriate, no permissions (authorization) are validated
+appropriate, no permissions (authorization) are validated:
 
 ```javascript
 router.put('/accounts/:username/notes/:note', auth, async (req, res, next) => {
@@ -38,7 +38,7 @@ router.get('/accounts/:username/notes', auth, async (req, res, next) => {
 ```
 
 In this case resources can be managed only by their owner. This is the
-validation that our [authorization middleware][3] will be responsible for
+validation that our [authorization middleware][3] will be responsible for:
 
 ```javascript
 function ownership (req, res, next) {
@@ -52,7 +52,7 @@ function ownership (req, res, next) {
 ```
 
 This is how API routes look like when they include both authentication and
-authorization middlewares
+authorization middlewares:
 
 ```javascript
 router.put('/accounts/:username/notes/:note', [auth, ownership], async (req, res, next) => {

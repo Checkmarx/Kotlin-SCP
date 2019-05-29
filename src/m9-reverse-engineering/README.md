@@ -12,10 +12,10 @@ internals such as:
 Several tools are available to perform this task such as [apktool][1], [jadx][2]
 or [jd-gui][3].
 
-Apktool is a tool allowing to obtain the smali bytecode of the app, which is
-executed by the Dalvik virtual machine. The code obtained is very low level but
-allows to have a deep overview of the app internals. Here is an example of smali
-bytecode:
+Apktool is a decompiling tool, allowing to obtain the smali bytecode of the app,
+which is executed by the Dalvik virtual machine. The code obtained is very low
+level, but it permits a deep overview of the app internals. Here is an
+example of smali bytecode:
 
 ```
 # static fields
@@ -58,9 +58,9 @@ As you can see, there is no obfuscation at all on the [Kotlin Goat][0]. An
 attacker is able to easily analyze the app in order to understand the inner
 mechanisms.
 
-In order to slow down the process of reverse engineering, developers use some
+In order to slow down the process of reverse engineering, developers use various
 techniques to obfuscate the code such as renaming the variables and name
-functions with weird names or using a non latin charset. Here is an example
+functions with weird names or using a non-Latin charset. Here is an example
 where all the variables and method names were renamed:
 
 ![Android app using obfuscation technique][jadx-obfuscation]

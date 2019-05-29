@@ -4,36 +4,37 @@ M4: Insecure Authentication
 Weak authentication for mobile applications is fairly prevalent due to mobile
 device's input factor: 4-digit PINs are a great example of it.
 Either a weak password policy due to usability requirements or authentication
-based on features like TouchID make your application vulnerable: contrary to
+based on features like TouchID, make your application vulnerable. Contrary to
 what you may think, unlike passwords, you may be forced to give up your
 fingerprint.
 
 Unless there's a functional requirement, mobile applications do not require a
 back-end server to which they should be authenticated in real-time. Even when
-such back-end server exists usually users are not required to be online at all
-times. This poses a great challenge on mobile applications authentication as if
-authentication has to happen locally, then it can be bypassed on jailbroken
-devices through runtime manipulation or modification of the binary.
+such back-end servers exist usually users are not required to be online at all
+times. This poses a great challenge on mobile applications' authentication. If
+because authentication has to happen locally, then it can be bypassed on
+jailbroken devices through runtime manipulation or modification of the binary.
 
 Insecure Authentication is not only about guessable passwords, default user
-accounts or data breaches. At certain circumstances the authentication mechanism
-can be bypassed and the system will fail to identify the user and log its
-(malicious) activity. Usually in this scenario, user's will gain access to
-sensitive functionalities as the system will also fail to validate its role,
-highlighting also problems with the authorization controls.
+accounts or data breaches. Under certain circumstances, the authentication
+mechanism can also be bypassed and the system will fail to identify the user and
+log its (malicious) activity. Usually in this scenario, user's will gain access
+to sensitive functionalities, since the system will also fail to validate its
+role, highlighting problems with the authorization controls as well.
 
-The movie below shows [Kotlin Goat][0] authentication exploitation
+The movie below shows an Insecure Authentication exploitation on [Kotlin
+Goat][0]
 
 {% youtube src="https://www.youtube.com/watch?v=qJO2A2uox1E" %}{% endyoutube %}
 
-Now it is time to improve the application establishing a strong password policy
-and storing authentication data safely: we will keep authentication data locally
-as not all applications have a back-end server to handle it. When such back-end
-exists, password policy should be the same on both sides. Optionally password
-strength validation can be delegated to the back-end.
+Now it is time to improve the application, by establishing a strong password
+policy and storing authentication data safely. We will keep authentication data
+locally, since not all applications have a back-end server to handle it. When
+such a back-end exists, the password policy should be the same on both sides.
+Optionally, password "strength" validation can be delegated to the back-end.
 
 The [PasswordHelper object][4] implements [OWASP recommendations for Password
-Strength][1]
+Strength][1]:
 
 ```kotlin
 package com.cx.vulnerablekotlinapp.helpers
@@ -113,22 +114,22 @@ class SignupActivity : AppCompatActivity() {
 }
 ```
 
-Although passwords are now stronger, they're still stored as clear text on
+Although the passwords are now stronger, they're still stored as clear text on a
 database. Someone with access to the device is still able to retrieve and
 manipulate database records. To address this issue, we will store a salted
 version of `username` and `password`.
 
 In the case of password storage, [OWASP recommends the following algorithms][6]:
-[bcrypt][7], [PDKDF2][8], [Argon2][9] and [scrypt][10]. Those take care of
-hashing and salting passwords in a robust way. 
+[bcrypt][7], [PDKDF2][8], [Argon2][9] and [scrypt][10]. These can enable hashing
+and salting passwords in a robust way. 
 
-We'll use `bcrypt` which should be good enough for most of the situations.
-The advantage of `bcrypt` is that it is simpler to use and is therefore less
+We'll use `bcrypt`, which should be satisfactory for most situations. The
+advantages of `bcrypt` is that it's simpler to use. Therefore, it is less
 error-prone.
 
-After adding [jBCrypt][11] as dependency to have access to a `bcrypt`
-implementation, we just need to make two little changes to [Kotlin Goat][0].
-First in the `attemptSignup()` method of `SignupActivity` so that passwords are
+After adding [jBCrypt][11] as a dependency to have access to a `bcrypt`
+implementation, we just need to make two small changes to [Kotlin Goat][0].
+First is the `attemptSignup()` method of `SignupActivity` so that passwords are
 stored as a salted hash ([source][12])
 
 ```kotlin
@@ -148,9 +149,9 @@ class SignupActivity : AppCompatActivity() {
     }
 }
 ```
-and the second one in the `UserLoginTask` `doInBackground()` method to compare
-provided password with the stored one using `Bcrypt.checkpw()` method
-([source][13])
+And the second one is the `UserLoginTask` `doInBackground()` method to compare
+a provided password with the stored one using `Bcrypt.checkpw()` method
+([source][13]):
 
 ```kotlin
 package com.cx.vulnerablekotlinapp
@@ -174,9 +175,10 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
 }
 ```
 
-Keep in mind that this is just a brief overview over Insecure Authentication.
-Specially if you're doing local authentication you're recommended to carefully
-read sections [M8: Code Tampering][2] and [M9: Reverse Engineering][3]
+Keep in mind that this is just a brief overview of Insecure Authentication.
+Especially if you're doing local authentication, we highly recommend that you
+carefully read sections [M8: Code Tampering][2] and [M9: Reverse
+Engineering][3].
 
 ## Resources
 

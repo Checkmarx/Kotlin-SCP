@@ -1,16 +1,16 @@
 M1: Improper Platform Usage
 ===========================
 From the [Android documentation][4]: "_Content providers are one of the primary
-building blocks of Android applications, providing content to applications_".
-Content providers are mostly used to share data between Android applications.
-Such as Activities, Services or Receivers, Content providers can have weak
+building blocks of Android applications, providing content to applications._"
+Content providers are mostly used to share data between Android applications,
+such as activities, services or receivers. Content providers can have weak
 permissions or can be exported for all the apps on the device. Such
-misconfiguration can lead the Android app to leak the data used by the Content
+misconfiguration can allow the Android app to leak the data used by the Content
 provider.
 
 When the Content provider is exported, all the apps can query the Content
 provider to retrieve or modify the data. On the [Kotlin Goat app][0], we can
-identify that a Content provider is defined with the name `.AccountProvider` and
+see that a Content provider is defined with the name `.AccountProvider` and
 the exported tag is set to true. Here is an extract of the `AndroidManifest`
 file:
 
@@ -36,7 +36,7 @@ companion object {
 ```
 
 Then, using the `adb` tool, we can query this provider and even insert data.
-Here is simple example allowing to query the provider in order to retrieve the
+Here is simple example allowing a query to the provider in order to retrieve the
 accounts stored:
 
 ```
@@ -47,7 +47,8 @@ Row: 0 id=1, username=admin, password=admin
 We can obtain the admin's credentials in this case.
 
 
-Here is another example allowing to add a new account into the Kotlin Goat app:
+Here is another example allowing an insertion to add a new account into the
+Kotlin Goat app:
 
 ```
 $ adb shell content insert --uri content://com.cx.vulnerablekotlinapp.accounts/Accounts  --bind username:s:kotlin --bind password:s:goat

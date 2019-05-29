@@ -1,23 +1,23 @@
 M7: Client Code Quality
 =======================
 
-In this category fit code-level issues like a buffer overflow in C or a
-DOM-based XSS in a Webview mobile app. Usually something that requires code
-changes to be fixed as it is caused by an improper API or language constructs
+This category includes code-level issues like a buffer overflow in C, or a
+DOM-based XSS in a Webview mobile app. It's usually something that requires code
+changes to be fixed, since it is caused by an improper API or language constructs
 usage.
 
-Although Client Code Quality issues are prevalent the exploitation requires
-low-level knowledge. The typical primary goal is to execute foreign code within
-the mobile code's address space.
+Although Client Code Quality issues are prevalent, the exploitation often
+requires low-level knowledge. The typical primary goal is to execute foreign
+code within the mobile code's address space.
 
 Consistent coding patterns and coding style guidelines broadly accepted in the
-organization will help to improve code quality. As these issues are not easily
-detected on code review, using a static analysis tool usually results well.
-Buffer overflows and memory leaks should be top priorities over other code
-quality issues to be solved.
+organization will help to improve code quality. since these issues are not
+easily detected on code review, using a static analysis tool usually provides
+the results. Buffer overflows and memory leaks should be top priorities over
+other code quality issues yet to be solved.
 
 [Detekt][1] is one of such static code analysis tools for Kotlin licensed under
-the [Apache License 2.0][3]. It provides several integration mechanism such as
+the [Apache License 2.0][3]. It provides several integration mechanisms such as
 a Gradle plugin and a SonarQube integration, but it can also run standalone.
 
 Running Detekt on [Kotlin Goat][0] source code results as bellow
@@ -46,8 +46,8 @@ Project Statistics:
         - number of kt files: 17
 ```
 
-The report summary points several issues grouped by ruleset. Below are just the
-most relevant 
+The report summary highlights several issues grouped by ruleset. Below are just
+the most relevant issues found:
 
 ```
 Ruleset: complexity - 40min debt
