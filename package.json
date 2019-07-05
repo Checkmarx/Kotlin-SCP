@@ -2,6 +2,10 @@
   "name": "kotlin-scp",
   "version": "0.0.0",
   "description": "Kotlin Secure Coding Practices",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Checkmarx/Kotlin-SCP"
+  },
   "main": "index.js",
   "dependencies": {
     "gitbook-convert": "^1.1.1"
@@ -11,9 +15,9 @@
   },
   "scripts": {
     "serve": "node_modules/.bin/gitbook serve",
-    "build-pdf": "node_modules/.bin/gitbook pdf ./ ./build/kotlin-secure-coding-practices.pdf",
-    "build-epub": "node_modules/.bin/gitbook epub ./ ./build/kotlin-secure-coding-practices.epub",
-    "build-mobi": "node_modules/.bin/gitbook mobi ./ ./build/kotlin-secure-coding-practices.mobi",
+    "build-pdf": "node_modules/.bin/gitbook pdf ./ ./dist/kotlin-secure-coding-practices.pdf",
+    "build-epub": "node_modules/.bin/gitbook epub ./ ./dist/kotlin-secure-coding-practices.epub",
+    "build-mobi": "node_modules/.bin/gitbook mobi ./ ./dist/kotlin-secure-coding-practices.mobi",
     "build": "npm run build-pdf; npm run build-epub; npm run build-mobi"
   },
   "keywords": [
@@ -23,5 +27,5 @@
     "Checkmarx"
   ],
   "author": "Checkmarx Security Research Team",
-  "license": "CC BY-SA 4.0"
+  "license": "CC-BY-SA-4.0)"
 }

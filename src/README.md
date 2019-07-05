@@ -78,9 +78,9 @@ make clear to others the license terms of this work
 [https://creativecommons.org/licenses/by-sa/4.0/][9].
 
 [online]: https://checkmarx.gitbooks.io/kotlin-scp/content/
-[pdf]: https://legacy.gitbook.com/download/pdf/book/checkmarx/kotlin-scp
-[mobi]: https://legacy.gitbook.com/download/mobi/book/checkmarx/kotlin-scp
-[epub]: https://legacy.gitbook.com/download/epub/book/checkmarx/kotlin-scp
+[pdf]: ./dist/kotlin-secure-coding-practices.pdf
+[mobi]: ./dist/kotlin-secure-coding-practices.mobi
+[epub]: ./dist/kotlin-secure-coding-practices.epub
 
 [1]: https://kotlinlang.org/
 [2]: http://chkmrx.co/2sffXFr
@@ -89,6 +89,6 @@ make clear to others the license terms of this work
 [5]: https://checkmarx.com
 [6]: https://www.twitter.com/checkmarx
 [7]: https://www.owasp.org/index.php/OWASP_Mobile_Security_Project
-[8]: ./CONTRIBUTING.md
+[8]: ./how-to-contribute.md
 [9]: https://creativecommons.org/licenses/by-sa/4.0/
 [10]: https://www.owasp.org/
