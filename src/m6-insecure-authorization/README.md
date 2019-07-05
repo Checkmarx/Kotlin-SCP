@@ -21,7 +21,9 @@ likely vulnerable to Insecure Authorization.
 The movie below demonstrates how Insecure Authorization can be exploited on 
 [Goatlin][0].
 
-{% youtube src="https://www.youtube.com/watch?v=vsyTMpRnFtA" %}{% endyoutube %}
+{% youtube %}
+https://www.youtube.com/watch?v=vsyTMpRnFtA
+{% endyoutube %}
 
 Insecure Authorization in [Goatlin][0] is clearly a back-end issue.
 Although [API routes][1] include [**authentication** middleware][2] when

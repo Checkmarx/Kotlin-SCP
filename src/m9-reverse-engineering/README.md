@@ -52,7 +52,9 @@ In order to obtain Java code, an attacker can use [jadx][2] or [jd-gui][3] to
 decompile the app. The video below demonstrates it using [jadx][2] on [Kotlin
 Goat][0]
 
-{% youtube src="https://www.youtube.com/watch?v=8b882SulnQA" %}{% endyoutube %}
+{% youtube %}
+https://www.youtube.com/watch?v=8b882SulnQA
+{% endyoutube %}
 
 As you can see, there is no obfuscation at all on the [Goatlin][0]. An attacker
 is able to easily analyze the app in order to understand the inner mechanisms.

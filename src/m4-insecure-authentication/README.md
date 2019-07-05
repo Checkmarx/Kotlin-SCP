@@ -25,7 +25,9 @@ role, highlighting problems with the authorization controls as well.
 The movie below shows an Insecure Authentication exploitation on [Kotlin
 Goat][0]
 
-{% youtube src="https://www.youtube.com/watch?v=qJO2A2uox1E" %}{% endyoutube %}
+{% youtube %}
+https://www.youtube.com/watch?v=qJO2A2uox1E
+{% endyoutube %}
 
 Now it is time to improve the application by establishing a strong password
 policy and storing authentication data safely. We will keep authentication data
