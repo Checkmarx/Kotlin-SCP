@@ -1,17 +1,17 @@
 M3: Insecure Communication
 ==========================
 
-Currently most mobile applications exchange data in a client-server fashion at
+Currently, most mobile applications exchange data in a client-server fashion at
 some point. When these communications happen, data traverses either the mobile
 carrier's network or between some Wi-Fi network and the internet.
 
 Although exploiting the mobile carrier's network is not an impossible task,
 exploiting a Wi-Fi network is usually much easier. If communications lack
-SSL/TLS, then an adversary will be able not only to steal the data but also to
+SSL/TLS, then an adversary will be able not only to steal the data, but also to
 execute Man-in-the-Middle (MitM) attacks.
 
 The following video demonstrates Insecure Communications exploitation on [Kotlin
-Goat][0] mobile application. The movie shows network monitoring, what gives
+Goat][0] mobile application. The movie shows network monitoring, what gives an
 adversary access to exchanged data nevertheless, due to insecure communication,
 Man-in-the-Middle (MitM) would also be possible.
 

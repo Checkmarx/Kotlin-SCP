@@ -11,7 +11,7 @@ requires low-level knowledge. The typical primary goal is to execute foreign
 code within the mobile code's address space.
 
 Consistent coding patterns and coding style guidelines broadly accepted in the
-organization will help to improve code quality. since these issues are not
+organization will help to improve code quality. Since these issues are not
 easily detected on code review, using a static analysis tool usually provides
 the results. Buffer overflows and memory leaks should be top priorities over
 other code quality issues yet to be solved.
@@ -20,7 +20,7 @@ other code quality issues yet to be solved.
 the [Apache License 2.0][3]. It provides several integration mechanisms such as
 a Gradle plugin and a SonarQube integration, but it can also run standalone.
 
-Running Detekt on [Kotlin Goat][0] source code results as bellow
+Running Detekt on [Kotlin Goat][0] source code, results as bellow:
 
 ```
 $ java -jar detekt-cli/build/libs/detekt-cli-1.0.0-RC12-all.jar -r txt:/tmp/kotlin-goat.txt -i ~/Projects/char49/kotlin/goat/packages/clients/android/

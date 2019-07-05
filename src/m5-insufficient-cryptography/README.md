@@ -56,7 +56,7 @@ and persisted in [Android Keystore][2]. This key is user specific (see
 
 Every time encryption/decryption is required, the `username` should be provided
 to the appropriate `CryptoHelper` method, since it is used as an alias to
-locate user's key in Android Keystore (see [CryptoHelper.getUserKey()][7]):
+locate the user's key in Android Keystore (see [CryptoHelper.getUserKey()][7]):
 
 ```kotlin
 package com.cx.vulnerablekotlinapp.helpers

@@ -37,7 +37,7 @@ router.get('/accounts/:username/notes', auth, async (req, res, next) => {
 });
 ```
 
-In this case resources can be managed only by their owner. This is the
+In this case, resources can be managed only by their owner. This is the
 validation that our [authorization middleware][3] will be responsible for:
 
 ```javascript

@@ -1,7 +1,7 @@
 M10: Extraneous Functionality
 =============================
 
-As the name suggests extraneous functionality are functions or secrets hidden
+As the name suggests, extraneous functionality are functions or secrets hidden
 inside the app. Those functionalities allow an attacker to perform unintended
 actions such as:
 
@@ -34,8 +34,8 @@ inner class UserLoginTask internal constructor(private val mUsername: String,
 }
 ```
 
-When performing static analysis using [apktool][1], [jadx][2] or [jd-gui][3], an
-attacker is able to retrieve those credentials and then use them to obtain an
+When performing static analysis using [apktool][1], [jadx][2], or [jd-gui][3],
+an attacker is able to retrieve those credentials and then use them to obtain
 access to the application.
 
 Using [apktool][1], it is possible to discover those credentials. On the

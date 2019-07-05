@@ -2,7 +2,7 @@ M4: Insecure Authentication
 ===========================
 
 Weak authentication for mobile applications is fairly prevalent due to mobile
-device's input factor: 4-digit PINs are a great example of it.
+devices' input factor: 4-digit PINs are a great example of it.
 Either a weak password policy due to usability requirements or authentication
 based on features like TouchID, make your application vulnerable. Contrary to
 what you may think, unlike passwords, you may be forced to give up your
@@ -10,13 +10,13 @@ fingerprint.
 
 Unless there's a functional requirement, mobile applications do not require a
 back-end server to which they should be authenticated in real-time. Even when
-such back-end servers exist usually users are not required to be online at all
-times. This poses a great challenge on mobile applications' authentication. If
-because authentication has to happen locally, then it can be bypassed on
+such back-end servers exist, usually users are not required to be online at all
+times. This poses a great challenge on mobile applications' authentication. 
+Whenever authentication has to happen locally, then it can be bypassed on
 jailbroken devices through runtime manipulation or modification of the binary.
 
 Insecure Authentication is not only about guessable passwords, default user
-accounts or data breaches. Under certain circumstances, the authentication
+accounts, or data breaches. Under certain circumstances, the authentication
 mechanism can also be bypassed and the system will fail to identify the user and
 log its (malicious) activity. Usually in this scenario, user's will gain access
 to sensitive functionalities, since the system will also fail to validate its
@@ -27,7 +27,7 @@ Goat][0]
 
 {% youtube src="https://www.youtube.com/watch?v=qJO2A2uox1E" %}{% endyoutube %}
 
-Now it is time to improve the application, by establishing a strong password
+Now it is time to improve the application by establishing a strong password
 policy and storing authentication data safely. We will keep authentication data
 locally, since not all applications have a back-end server to handle it. When
 such a back-end exists, the password policy should be the same on both sides.
@@ -85,7 +85,7 @@ object PasswordHelper {
 ```
 
 `PasswordHelper.strength()` is then called from `signupAttempt()` on Kotlin Goat
-`SignupActivity` ([source][5])
+`SignupActivity` ([source][5]):
 
 ```kotlin
 package com.cx.vulnerablekotlinapp
@@ -130,7 +130,7 @@ error-prone.
 After adding [jBCrypt][11] as a dependency to have access to a `bcrypt`
 implementation, we just need to make two small changes to [Kotlin Goat][0].
 First is the `attemptSignup()` method of `SignupActivity` so that passwords are
-stored as a salted hash ([source][12])
+stored as a salted hash ([source][12]):
 
 ```kotlin
 package com.cx.vulnerablekotlinapp

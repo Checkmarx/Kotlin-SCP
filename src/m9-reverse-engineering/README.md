@@ -1,7 +1,7 @@
 M9: Reverse Engineering
 =======================
 
-One of the first step when performing security assessments on Android
+One of the first steps when performing security assessments on Android
 applications is to perform static analysis of the app in order to understand its
 internals such as:
 

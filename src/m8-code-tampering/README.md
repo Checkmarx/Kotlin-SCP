@@ -1,7 +1,7 @@
 M8: Code Tampering
 ==================
 
-Once a mobile application is delivered and installed on a device both the code
+Once a mobile application is delivered and installed on a device, both the code
 and data will be available there. This gives the adversary the chance to
 directly modify the code, manipulate memory content, change or replace system
 APIs or simply modify application's data and resources. This is known as **Code
@@ -100,7 +100,7 @@ To prevent the application to run on a Rooted environment, the
 `RootDetectionHelper.check()` method, which combines all the described
 techniques, is called on our main activity (Login). If a Rooted environment is
 detected then the user is presented a dialog and the application is forced to
-close
+close:
 
 ```kotlin
 package com.cx.vulnerablekotlinapp

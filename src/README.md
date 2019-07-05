@@ -23,6 +23,11 @@ Since May 7th 2019, Kotlin is Google's preferred language for Android app
 development. So, it is important for developers to familiarize with this new
 language.
 
+Checkmarx Research Team helps educate developers, security teams, and the
+industry overall about common coding errors, and brings awareness of
+vulnerabilities that are often introduced during the software development
+process.
+
 ## The Audience for this Book
 
 The primary audience of the Kotlin Secure Coding Practices guide is Android

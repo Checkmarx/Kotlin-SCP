@@ -3,7 +3,7 @@ M2: Insecure Data Storage
 
 The [Android ecosystem][7] provides several ways to store data for an app.  The
 kind of storage used by developers depends on the kind of data stored, the usage
-of the data and also whether the data should be kept private or shared to other
+of the data, and also whether the data should be kept private or shared to other
 apps.
 
 The following solutions are provided by Android:
