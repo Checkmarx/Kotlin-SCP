@@ -1,4 +1,4 @@
-    M3: Insecure Communication
+M3: Insecure Communication
 ==========================
 
 Currently, most mobile applications exchange data in a client-server fashion at
