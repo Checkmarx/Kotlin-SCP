@@ -19,11 +19,11 @@ sends the user role or permissions to the back-end as part of the request, it is
 likely vulnerable to Insecure Authorization.
 
 The movie below demonstrates how Insecure Authorization can be exploited on 
-[Kotlin Goat][0].
+[Goatlin][0].
 
 {% youtube src="https://www.youtube.com/watch?v=vsyTMpRnFtA" %}{% endyoutube %}
 
-Insecure Authorization in [Kotlin Goat][0] is clearly a back-end issue.
+Insecure Authorization in [Goatlin][0] is clearly a back-end issue.
 Although [API routes][1] include [**authentication** middleware][2] when
 appropriate, no permissions (authorization) are validated:
 
@@ -73,10 +73,10 @@ router.get('/accounts/:username/notes', [auth, ownership], async (req, res, next
 * [Using middleware - Express][7]
 * [OWASP Mobile Top 10 2016: M6 - Insecure Authorization][8]
 
-[0]: https://github.com/PauloASilva/KotlinGoat
-[1]: https://github.com/PauloASilva/KotlinGoat/blob/master/packages/services/api/src/routes/accounts.js#L29
-[2]: https://github.com/PauloASilva/KotlinGoat/blob/master/packages/services/api/src/middleware/auth.js
-[3]: https://github.com/PauloASilva/KotlinGoat/blob/feature/m6-insecure-authorization/packages/services/api/src/middleware/ownership.js
+[0]: https://github.com/Checkmarx/Goatlin
+[1]: https://github.com/Checkmarx/Goatlin/blob/master/packages/services/api/src/routes/accounts.js#L29
+[2]: https://github.com/Checkmarx/Goatlin/blob/master/packages/services/api/src/middleware/auth.js
+[3]: https://github.com/Checkmarx/Goatlin/blob/feature/m6-insecure-authorization/packages/services/api/src/middleware/ownership.js
 [5]: https://www.owasp.org/index.php/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet
 [6]: https://www.owasp.org/index.php/Testing_for_Insecure_Direct_Object_References_(OTG-AUTHZ-004)
 [7]: https://expressjs.com/en/guide/using-middleware.html

@@ -10,8 +10,8 @@ actions such as:
   information, etc)
 * Discovering hidden back-end endpoints
 
-In the case of the [Kotlin Goat][0] app, a backdoor account is hardcoded into
-the code as shown below:
+In the case of the [Goatlin][0] app, a backdoor account is hardcoded into the
+code as shown below:
 
 ```kotlin
 inner class UserLoginTask internal constructor(private val mUsername: String,
@@ -55,11 +55,11 @@ account:
     const-string v0, "params"
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
     .line 218
-    iget-object v0, p0, Lcom/cx/vulnerablekotlinapp/LoginActivity$UserLoginTask;->mUsername:Ljava/lang/String;
+    iget-object v0, p0, Lcom/cx/goatlin/LoginActivity$UserLoginTask;->mUsername:Ljava/lang/String;
     const-string v1, "Supervisor"
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
     move-result v0
-    iget-object v1, p0, Lcom/cx/vulnerablekotlinapp/LoginActivity$UserLoginTask;->mPassword:Ljava/lang/String;
+    iget-object v1, p0, Lcom/cx/goatlin/LoginActivity$UserLoginTask;->mPassword:Ljava/lang/String;
     const-string v2, "MySuperSecretPassword123!"
     invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
     move-result v1
@@ -92,7 +92,7 @@ protected Boolean doInBackground(@NotNull Void... params) {
 
 * [OWASP Mobile Top 10 2016: M10 - Extraneous Functionality][4]
 
-[0]: https://github.com/PauloASilva/KotlinGoat
+[0]: https://github.com/Checkmarx/Goatlin
 [1]: https://github.com/skylot/jadx
 [2]: http://jd.benow.ca/
 [3]: https://ibotpeaches.github.io/Apktool/

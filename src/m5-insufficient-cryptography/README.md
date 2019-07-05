@@ -18,8 +18,8 @@ Keep in mind that encryption depends on secrets (keys) and even the best
 encryption algorithm will be useless if your application fails to keep its
 secrets by making the keys available to the attacker.
 
-In the movie below you'll see how [Kotlin Goat][0] cryptography fails by
-enabling the adversary to get the unencrypted version of stored data.
+In the movie below you'll see how [Goatlin][0] cryptography fails by enabling
+the adversary to get the unencrypted version of stored data.
 
 {% youtube src="https://www.youtube.com/watch?v=FbIj2hBMeaE" %}{% endyoutube %}
 
@@ -37,7 +37,7 @@ new methods: `createUserKey()` and `getUserKey()`. `encrypt()` and `decrypt()`
 methods were also changed to receive a `usernane` argument:
 
 ```kotlin
-package com.cx.vulnerablekotlinapp.helpers
+package com.cx.goatlin.helpers
 // ...
 class CryptoHelper {
     companion object {
@@ -59,7 +59,7 @@ to the appropriate `CryptoHelper` method, since it is used as an alias to
 locate the user's key in Android Keystore (see [CryptoHelper.getUserKey()][7]):
 
 ```kotlin
-package com.cx.vulnerablekotlinapp.helpers
+package com.cx.goatlin.helpers
 // ...
 class CryptoHelper {
     companion object {
@@ -95,14 +95,14 @@ corresponds to the message. Note that IV is not secret.
 * [Securely Storing Secrets in an Android Application][4]
 * [OWASP Mobile Top 10 2016: M5 - Insufficient Cryptography][10]
 
-[0]: https://github.com/PauloASilva/KotlinGoat
+[0]: https://github.com/Checkmarx/Goatlin
 [1]: https://en.wikipedia.org/wiki/Advanced_Encryption_Standard
 [2]: https://developer.android.com/training/articles/keystore
 [3]: https://medium.com/@josiassena/using-the-android-keystore-system-to-store-sensitive-information-3a56175a454b
 [4]: https://medium.com/@ericfu/securely-storing-secrets-in-an-android-application-501f030ae5a3
-[5]: https://github.com/PauloASilva/KotlinGoat/blob/feature/m5-insufficient-cryptography/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/CryptoHelper.kt
-[6]: https://github.com/PauloASilva/KotlinGoat/blob/feature/m5-insufficient-cryptography/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/SignupActivity.kt#L63
-[7]: https://github.com/PauloASilva/KotlinGoat/blob/feature/m5-insufficient-cryptography/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/CryptoHelper.kt#L35
+[5]: https://github.com/Checkmarx/Goatlin/blob/feature/m5-insufficient-cryptography/packages/clients/android/app/src/main/java/com/cx/goatlin/helpers/CryptoHelper.kt
+[6]: https://github.com/Checkmarx/Goatlin/blob/feature/m5-insufficient-cryptography/packages/clients/android/app/src/main/java/com/cx/goatlin/SignupActivity.kt#L63
+[7]: https://github.com/Checkmarx/Goatlin/blob/feature/m5-insufficient-cryptography/packages/clients/android/app/src/main/java/com/cx/goatlin/helpers/CryptoHelper.kt#L35
 [8]: https://en.wikipedia.org/wiki/Initialization_vector
 [9]: https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.Builder.html#setRandomizedEncryptionRequired(boolean)
 [10]: https://www.owasp.org/index.php/Mobile_Top_10_2016-M5-Insufficient_Cryptography

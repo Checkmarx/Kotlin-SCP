@@ -20,7 +20,7 @@ text. For instance, it is frequent to find API keys, passwords, Personally
 Identifiable Information (PII) stored on the Shared Preferences or databases
 used by the app.
 
-In the case of the [Kotlin Goat app][0], when a user performs a sign up, the
+In the case of the [Goatlin app][0], when a user performs a sign up, the
 credentials are stored locally inside the database. Here is the extract of the
 SignupActivity class showing the creation of the account and how it is stored
 into the database:
@@ -152,7 +152,7 @@ of the app, etc.) can retrieve the credentials of the different users using the
 app. Using [sqlitebrowser][4], it is easy to inspect the content of an SQLite
 database. Here is the content of the `Accounts` table used by the app:
 
-![Viewing the content of the Kotlin Goat database][sqlitebrowser-database]
+![Viewing the content of the Goatlin database][sqlitebrowser-database]
 
 As discussed before, we can confirm that the passwords are stored in clear text
 without using any encryption mechanism.
@@ -172,7 +172,7 @@ without using any encryption mechanism.
 * [OWASP Mobile Top 10 2016: M2 - Insecure Data Storage][6]
 * [OWASP Mobile Security Testing guide - Test Data Storage] [5]
 
-[0]: https://github.com/PauloASilva/KotlinGoat
+[0]: https://github.com/Checkmarx/Goatlin
 [1]: https://github.com/skylot/jadx
 [2]: http://jd.benow.ca/
 [3]: https://ibotpeaches.github.io/Apktool/

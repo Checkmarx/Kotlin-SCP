@@ -26,7 +26,7 @@ Modification. Generally speaking applications should be able to detect at
 runtime whether code was added or removed based upon what they know about their
 integrity at compile time.
 
-To address this weakness on [Kotlin Goat][0] we followed OWASP recommendation on
+To address this weakness on [Goatlin][0] we followed OWASP recommendation on
 Android Root detection. The [`RootDetectionHelper` class][3] implements a few
 techniques such as:
 
@@ -103,7 +103,7 @@ detected then the user is presented a dialog and the application is forced to
 close:
 
 ```kotlin
-package com.cx.vulnerablekotlinapp
+package com.cx.goatlin
 // ...
 class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
     // ...
@@ -144,8 +144,8 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
 * [Android Root Detection Techniques][2]
 * [OWASP Mobile Top 10 2016: M8 - Code Tampering][4]
 
-[0]: https://github.com/PauloASilva/KotlinGoat
+[0]: https://github.com/Checkmarx/Goatlin
 [1]: https://www.owasp.org/index.php/OWASP_Reverse_Engineering_and_Code_Modification_Prevention_Project
 [2]: https://blog.netspi.com/android-root-detection-techniques/
-[3]: https://github.com/PauloASilva/KotlinGoat/blob/feature/m8-code-tampering/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/RootDetectionHelper.kt
+[3]: https://github.com/Checkmarx/Goatlin/blob/feature/m8-code-tampering/packages/clients/android/app/src/main/java/com/cx/goatlin/helpers/RootDetectionHelper.kt
 [4]: https://www.owasp.org/index.php/Mobile_Top_10_2016-M8-Code_Tampering
