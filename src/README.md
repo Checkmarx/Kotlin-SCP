@@ -5,30 +5,52 @@ This book is available for [online reading][online] or download in [PDF][pdf],
 
 # Introduction
 
-*Kotlin Secure Coding Practices* is a guide written for anyone who is using
-[Kotlin][1] for mobile development.
+*Kotlin Secure Coding Practices* is a guide written for anyone using [Kotlin][1]
+for mobile development.
 
 This book is a collaborative effort started by [Checkmarx Security Research
 Team][2], open sourced for community contributions. Its structure covers the
-[OWASP Mobile Top 10 2016][3] aiming to help developers avoid common
-mistakes.
+[OWASP Mobile Top 10 2016][3] intended to help developers avoid common mistakes.
 
-Kotlin is a _Statically typed programming language for modern multiplatform
+Kotlin is a _statically typed programming language for modern multiplatform
 applications 100% interoperable with Java™ and Android™_, primarily developed
-by a team of [JetBrains][4]. It is now fully supported by Google as an
-alternative to Android standard Java compiler.
+by the team at [JetBrains][4]. It is now fully supported by Google as an
+alternative to the Android standard Java compiler.
+
+## Why This Book
+
+Since May 7th 2019, Kotlin is Google's preferred language for Android app
+development. So, it is important for developers to familiarize with this new
+language.
+
+Checkmarx Research Team helps educate developers, security teams, and the
+industry overall about common coding errors, and brings awareness of
+vulnerabilities that are often introduced during the software development
+process.
+
+## The Audience for this Book
+
+The primary audience of the Kotlin Secure Coding Practices guide is Android
+developers. This guide can still be used by penetration testers to learn how to
+identify well-known vulnerabilities on Kotlin applications.
+
+## What You Will Learn
+
+The authors of this book mapped the OWASP Mobile Top 10 security weaknesses to
+Kotlin on a weakness-by-weakness basis while providing examples,
+recommendations, and fixes to help developers avoid common mistakes and
+pitfalls. After reading this book and referring to it often, you will learn how
+to ensure you are developing secure mobile apps using Kotlin.
 
 ## About Checkmarx
 
-[Checkmarx][2] is an Application Security software company, whose mission is to
-provide enterprise organizations with application security testing products
-and services that empower developers to deliver secure applications. Amongst
-the company's 1,000 customers are five of the world's top 10 software vendors,
-four of the top American banks, and many Fortune 500 and government
-organizations, including SAP, Samsung and Salesforce.com.
-
-For more information about Checkmarx, visit [checkmarx.com][5]
-or follow us on Twitter: [@checkmarx][6].
+[Checkmarx][2] is the Software Exposure Platform for the enterprise. Over 1,800
+organizations around the globe rely on Checkmarx to measure and manage software
+security risk at the speed of DevOps. Checkmarx serves five of the world’s top
+10 software vendors, four of the top American banks, and many government
+organizations and Fortune 500 enterprises, including SAP, Samsung, and
+Salesforce.com. Learn more at [checkmarx.com][5] or follow us on Twitter:
+[@checkmarx][6].
 
 ## About OWASP Mobile Security Project
 
@@ -44,9 +66,9 @@ conceive, develop, acquire, operate, and maintain applications that can be
 trusted. All of the OWASP tools, documents, forums, and chapters are free and
 open to anyone interested in improving application security_".
 
-## How To Contribute
+## How to Contribute
 
-To know how to contribute, please refer to [CONTRIBUTING.md][8].
+To learn how to contribute, please refer to [CONTRIBUTING.md][8].
 
 ## License
 

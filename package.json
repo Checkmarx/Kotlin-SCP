@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "description": "Kotlin Secure Coding Practices",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "gitbook-convert": "^1.1.1"
+  },
   "devDependencies": {
     "gitbook-cli": "^2.3.2"
   },

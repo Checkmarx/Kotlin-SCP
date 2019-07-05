@@ -1,29 +1,29 @@
 M7: Client Code Quality
 =======================
 
-In this category fit code-level issues like a buffer overflow in C or a
-DOM-based XSS in a Webview mobile app. Usually something that requires code
-changes to be fixed as it is caused by an improper API or language constructs
+This category includes code-level issues like a buffer overflow in C, or a
+DOM-based XSS in a Webview mobile app. It's usually something that requires code
+changes to be fixed, since it is caused by an improper API or language constructs
 usage.
 
-Although Client Code Quality issues are prevalent the exploitation requires
-low-level knowledge. The typical primary goal is to execute foreign code within
-the mobile code's address space.
+Although Client Code Quality issues are prevalent, the exploitation often
+requires low-level knowledge. The typical primary goal is to execute foreign
+code within the mobile code's address space.
 
 Consistent coding patterns and coding style guidelines broadly accepted in the
-organization will help to improve code quality. As these issues are not easily
-detected on code review, using a static analysis tool usually results well.
-Buffer overflows and memory leaks should be top priorities over other code
-quality issues to be solved.
+organization will help to improve code quality. Since these issues are not
+easily detected on code review, using a static analysis tool usually provides
+the results. Buffer overflows and memory leaks should be top priorities over
+other code quality issues yet to be solved.
 
 [Detekt][1] is one of such static code analysis tools for Kotlin licensed under
-the [Apache License 2.0][3]. It provides several integration mechanism such as
+the [Apache License 2.0][3]. It provides several integration mechanisms such as
 a Gradle plugin and a SonarQube integration, but it can also run standalone.
 
-Running Detekt on [Kotlin Goat][0] source code results as bellow
+Running Detekt on [Goatlin][0] source code, results as bellow:
 
 ```
-$ java -jar detekt-cli/build/libs/detekt-cli-1.0.0-RC12-all.jar -r txt:/tmp/kotlin-goat.txt -i ~/Projects/char49/kotlin/goat/packages/clients/android/
+$ java -jar detekt-cli/build/libs/detekt-cli-1.0.0-RC12-all.jar -r txt:/tmp/goatlin.txt -i goatlin/packages/clients/android/
 
 Overall debt: 7h
 
@@ -46,22 +46,22 @@ Project Statistics:
         - number of kt files: 17
 ```
 
-The report summary points several issues grouped by ruleset. Below are just the
-most relevant 
+The report summary highlights several issues grouped by ruleset. Below are just
+the most relevant issues found:
 
 ```
 Ruleset: complexity - 40min debt
-        TooManyFunctions - 15/11 - [DatabaseHelper] at /home/pauloasilva/Projects/char49/kotlin/goat/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/DatabaseHelper.kt:16:1
-        ComplexMethod - 15/10 - [showProgress] at /home/pauloasilva/Projects/char49/kotlin/goat/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/LoginActivity.kt:126:5
+        TooManyFunctions - 15/11 - [DatabaseHelper] at goatlin/packages/clients/android/app/src/main/java/com/cx/goatlin/helpers/DatabaseHelper.kt:16:1
+        ComplexMethod - 15/10 - [showProgress] at goatlin/packages/clients/android/app/src/main/java/com/cx/goatlin/LoginActivity.kt:126:5
 Ruleset: exceptions - 1h 40min debt
-        TooGenericExceptionCaught - [exception] at /home/pauloasilva/Projects/char49/kotlin/goat/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/DatabaseHelper.kt:46:18
-        TooGenericExceptionThrown - [installDatabaseFromAssets] at /home/pauloasilva/Projects/char49/kotlin/goat/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/DatabaseHelper.kt:47:13
-        TooGenericExceptionThrown - [getAccount] at /home/pauloasilva/Projects/char49/kotlin/goat/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/DatabaseHelper.kt:91:13
-        TooGenericExceptionThrown - [getNote] at /home/pauloasilva/Projects/char49/kotlin/goat/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/DatabaseHelper.kt:165:13
-        TooGenericExceptionCaught - [e] at /home/pauloasilva/Projects/char49/kotlin/goat/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/EditNoteActivity.kt:67:20
+        TooGenericExceptionCaught - [exception] at goatlin/packages/clients/android/app/src/main/java/com/cx/goatlin/helpers/DatabaseHelper.kt:46:18
+        TooGenericExceptionThrown - [installDatabaseFromAssets] at goatlin/packages/clients/android/app/src/main/java/com/cx/goatlin/helpers/DatabaseHelper.kt:47:13
+        TooGenericExceptionThrown - [getAccount] at goatlin/packages/clients/android/app/src/main/java/com/cx/goatlin/helpers/DatabaseHelper.kt:91:13
+        TooGenericExceptionThrown - [getNote] at goatlin/packages/clients/android/app/src/main/java/com/cx/goatlin/helpers/DatabaseHelper.kt:165:13
+        TooGenericExceptionCaught - [e] at goatlin/packages/clients/android/app/src/main/java/com/cx/goatlin/EditNoteActivity.kt:67:20
 Ruleset: style - 4h 10min debt
-        MagicNumber - [lowerBoundary] at /home/pauloasilva/Projects/char49/kotlin/goat/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/helpers/CryptoHelper.kt:12:63
-        WildcardImport - [LoginActivity.kt] at /home/pauloasilva/Projects/char49/kotlin/goat/packages/clients/android/app/src/main/java/com/cx/vulnerablekotlinapp/LoginActivity.kt:20:1
+        MagicNumber - [lowerBoundary] at goatlin/packages/clients/android/app/src/main/java/com/cx/goatlin/helpers/CryptoHelper.kt:12:63
+        WildcardImport - [LoginActivity.kt] at goatlin/packages/clients/android/app/src/main/java/com/cx/goatlin/LoginActivity.kt:20:1
 ```
 
 ## Resources
@@ -78,7 +78,7 @@ Ruleset: style - 4h 10min debt
 * [Idiomatic Kotlin. Best Practices.][6]
 * [OWASP Mobile Top 10 2016: M7 - Client Code Quality][7]
 
-[0]: https://github.com/PauloASilva/KotlinGoat
+[0]: https://github.com/Checkmarx/Goatlin
 [1]: https://arturbosch.github.io/detekt/
 [2]: https://www.sonarqube.org/
 [3]: https://www.apache.org/licenses/LICENSE-2.0

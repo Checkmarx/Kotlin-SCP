@@ -2,10 +2,10 @@ M6: Insecure Authorization
 ==========================
 
 It is important to distinguish between authentication and authorization: the
-former is the act of identifying an individual whilst the later is the act of
+former is the act of identifying an individual whereas the later is the act of
 checking that the identified individual has the necessary permissions to perform
-the act. To exploit Insecure Authorization, usually adversaries first login to
-the application as a legitimate user and then they typically force-browse to a
+the act. To exploit Insecure Authorization, adversaries usually log in to the
+application as a legitimate user first, then they typically force-browse to a
 vulnerable endpoint.
 
 Because authentication precedes authorization, if an application fails to
@@ -19,13 +19,15 @@ sends the user role or permissions to the back-end as part of the request, it is
 likely vulnerable to Insecure Authorization.
 
 The movie below demonstrates how Insecure Authorization can be exploited on 
-[Kotlin Goat][0].
+[Goatlin][0].
 
-{% youtube src="https://www.youtube.com/watch?v=vsyTMpRnFtA" %}{% endyoutube %}
+{% youtube %}
+https://www.youtube.com/watch?v=vsyTMpRnFtA
+{% endyoutube %}
 
-Insecure Authorization in [Kotlin Goat][0] is clearly a back-end issue.
+Insecure Authorization in [Goatlin][0] is clearly a back-end issue.
 Although [API routes][1] include [**authentication** middleware][2] when
-appropriate, no permissions (authorization) are validated
+appropriate, no permissions (authorization) are validated:
 
 ```javascript
 router.put('/accounts/:username/notes/:note', auth, async (req, res, next) => {
@@ -37,8 +39,8 @@ router.get('/accounts/:username/notes', auth, async (req, res, next) => {
 });
 ```
 
-In this case resources can be managed only by their owner. This is the
-validation that our [authorization middleware][3] will be responsible for
+In this case, resources can be managed only by their owner. This is the
+validation that our [authorization middleware][3] will be responsible for:
 
 ```javascript
 function ownership (req, res, next) {
@@ -52,7 +54,7 @@ function ownership (req, res, next) {
 ```
 
 This is how API routes look like when they include both authentication and
-authorization middlewares
+authorization middlewares:
 
 ```javascript
 router.put('/accounts/:username/notes/:note', [auth, ownership], async (req, res, next) => {
@@ -73,10 +75,10 @@ router.get('/accounts/:username/notes', [auth, ownership], async (req, res, next
 * [Using middleware - Express][7]
 * [OWASP Mobile Top 10 2016: M6 - Insecure Authorization][8]
 
-[0]: https://github.com/PauloASilva/KotlinGoat
-[1]: https://github.com/PauloASilva/KotlinGoat/blob/master/packages/services/api/src/routes/accounts.js#L29
-[2]: https://github.com/PauloASilva/KotlinGoat/blob/master/packages/services/api/src/middleware/auth.js
-[3]: https://github.com/PauloASilva/KotlinGoat/blob/feature/m6-insecure-authorization/packages/services/api/src/middleware/ownership.js
+[0]: https://github.com/Checkmarx/Goatlin
+[1]: https://github.com/Checkmarx/Goatlin/blob/master/packages/services/api/src/routes/accounts.js#L29
+[2]: https://github.com/Checkmarx/Goatlin/blob/master/packages/services/api/src/middleware/auth.js
+[3]: https://github.com/Checkmarx/Goatlin/blob/feature/m6-insecure-authorization/packages/services/api/src/middleware/ownership.js
 [5]: https://www.owasp.org/index.php/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet
 [6]: https://www.owasp.org/index.php/Testing_for_Insecure_Direct_Object_References_(OTG-AUTHZ-004)
 [7]: https://expressjs.com/en/guide/using-middleware.html

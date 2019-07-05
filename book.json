@@ -2,5 +2,8 @@
     "author": "Checkmarx Security Research Team",
     "language": "en_US",
     "root": "./src",
-    "plugins": ["youtube"]
+    "plugins": ["youtube"],
+    "pdf": {
+        "fontFamily": "sans-serif"
+    }
 }
