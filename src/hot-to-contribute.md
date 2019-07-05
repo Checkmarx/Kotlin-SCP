@@ -85,6 +85,20 @@ Features become available on the next release.
 Remember to keep `master` and `develop` branches of your fork up to date with
 the upstream ones.
 
+## How to Build
+
+If you have `node` installed, you can run:
+
+```
+$ npm i && node_modules/.bin/gitbook install && npm run build
+```
+
+You can also build the book using an ephemeral Docker container:
+
+```
+$ docker-compose run -u node:node --rm build
+```
+
 [1]: http://nvie.com/posts/a-successful-git-branching-model
 [2]: https://github.com/petervanderdoes/gitflow-avh
 [3]: https://github.com/jaspernbrouwer/git-flow-hooks
