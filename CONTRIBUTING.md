@@ -6,7 +6,7 @@ should be opened to the `develop` branch as `master` is reserved for releases.
 How to Contribute
 =================
 
-Here are the basic of contributing to GitHub:
+Here are the basics of contributing to GitHub:
 
 1. Fork and clone the project
 2. Set up the project locally
@@ -23,7 +23,7 @@ your environment.
 The book sources are written on [Markdown format][5], taking advantage of
 [gitbook-cli][6] ([Node.js][7] is required).
 
-While in the development stage, you can live preview your work.
+While in the development stage, you can live preview your work:
 
 ```shell
 $ npm run serve
@@ -58,7 +58,7 @@ preview the book.
 
 ### New section / sub-section
 
-Simply put, every time you want to work on a new section, or add a sub-section
+Simply put, every time you want to work on a new section, or add a sub-section,
 you should start a "feature":
 
 ```shell
