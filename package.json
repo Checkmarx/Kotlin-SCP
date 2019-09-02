@@ -15,10 +15,11 @@
   },
   "scripts": {
     "serve": "node_modules/.bin/gitbook serve",
-    "build-pdf": "node_modules/.bin/gitbook pdf ./ ./dist/kotlin-secure-coding-practices.pdf",
-    "build-epub": "node_modules/.bin/gitbook epub ./ ./dist/kotlin-secure-coding-practices.epub",
-    "build-mobi": "node_modules/.bin/gitbook mobi ./ ./dist/kotlin-secure-coding-practices.mobi",
-    "build": "npm run build-pdf; npm run build-epub; npm run build-mobi"
+    "build:pdf": "node_modules/.bin/gitbook pdf ./ ./dist/kotlin-secure-coding-practices.pdf",
+    "build:epub": "node_modules/.bin/gitbook epub ./ ./dist/kotlin-secure-coding-practices.epub",
+    "build:mobi": "node_modules/.bin/gitbook mobi ./ ./dist/kotlin-secure-coding-practices.mobi",
+    "build:docx": "ebook-convert ./dist/kotlin-secure-coding-practices.epub ./dist/kotlin-secure-coding-practices.docx",
+    "build": "npm run build:pdf; npm run build:epub; npm run build:mobi; npm run build:docx"
   },
   "keywords": [
     "Kotlin",
