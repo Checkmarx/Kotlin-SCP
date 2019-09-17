@@ -5,8 +5,8 @@ This book is available for [online reading][online] or download in [PDF][pdf],
 
 # Introduction
 
-*Kotlin Secure Coding Practices* is a guide written for anyone using [Kotlin][1]
-for mobile development.
+*Kotlin Guide - Mobile Application Secure Coding Practices*, is a guide written
+for anyone using [Kotlin][1] for mobile development.
 
 This book is a collaborative effort started by [Checkmarx Security Research
 Team][2], open sourced for community contributions. Its structure covers the
@@ -30,9 +30,9 @@ process.
 
 ## The Audience for this Book
 
-The primary audience of the Kotlin Secure Coding Practices guide is Android
-developers. This guide can still be used by penetration testers to learn how to
-identify well-known vulnerabilities on Kotlin applications.
+The primary audience of this guide is Android developers. This guide can still
+be used by penetration testers to learn how to identify well-known
+vulnerabilities on Kotlin applications.
 
 ## What You Will Learn
 
@@ -44,13 +44,15 @@ to ensure you are developing secure mobile apps using Kotlin.
 
 ## About Checkmarx
 
-[Checkmarx][2] is the Software Exposure Platform for the enterprise. Over 1,800
-organizations around the globe rely on Checkmarx to measure and manage software
-security risk at the speed of DevOps. Checkmarx serves five of the world’s top
-10 software vendors, four of the top American banks, and many government
-organizations and Fortune 500 enterprises, including SAP, Samsung, and
-Salesforce.com. Learn more at [checkmarx.com][5] or follow us on Twitter:
-[@checkmarx][6].
+[Checkmarx][2] is the global leader in software security solutions for modern
+enterprise software development. Checkmarx delivers the industry’s most
+comprehensive Software Security Platform that unifies with DevOps and provides
+static and interactive application security testing, software composition
+analysis and developer AppSec awareness and training programs to reduce and
+remediate risk from software vulnerabilities. Checkmarx is trusted by more than
+40 percent of the Fortune 100 and half of the Fortune 50, including leading
+organizations such as SAP, Samsung and Salesforce.com. Learn more at
+[www.checkmarx.com][2].
 
 ## About OWASP Mobile Security Project
 
@@ -83,12 +85,11 @@ make clear to others the license terms of this work
 [epub]: ./dist/kotlin-secure-coding-practices.epub
 
 [1]: https://kotlinlang.org/
-[2]: http://chkmrx.co/2sffXFr
+[2]: https://www.checkmarx.com/?utm_source__c=referral&utm_medium__c=github&utm_campaign__c=Kotlin-SCP&utm_source=referral&utm_medium=github&utm_campaign=Kotlin-SCP
 [3]: https://www.owasp.org/index.php/Mobile_Top_10_2016-Top_10
 [4]: https://www.jetbrains.com/
-[5]: https://checkmarx.com
 [6]: https://www.twitter.com/checkmarx
 [7]: https://www.owasp.org/index.php/OWASP_Mobile_Security_Project
-[8]: ./CONTRIBUTING.md
+[8]: ./how-to-contribute.md
 [9]: https://creativecommons.org/licenses/by-sa/4.0/
 [10]: https://www.owasp.org/

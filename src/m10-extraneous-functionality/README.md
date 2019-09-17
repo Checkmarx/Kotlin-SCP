@@ -7,7 +7,7 @@ actions such as:
 
 * Accessing administrative or debug functions
 * Retrieving hidden secrets (API keys, account credentials, personal
-  information, etc)
+  information, etc.)
 * Discovering hidden back-end endpoints
 
 In the case of the [Goatlin][0] app, a backdoor account is hardcoded into the

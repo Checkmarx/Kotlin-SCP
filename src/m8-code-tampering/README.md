@@ -4,7 +4,7 @@ M8: Code Tampering
 Once a mobile application is delivered and installed on a device, both the code
 and data will be available there. This gives the adversary the chance to
 directly modify the code, manipulate memory content, change or replace system
-APIs or simply modify application's data and resources. This is known as **Code
+APIs, or simply modify application's data and resources. This is known as **Code
 Tampering**.
 
 Rogue mobile applications play an important role in fraud-based attacks,
@@ -15,18 +15,18 @@ app via phishing attacks.
 Notice that Kotlin has no advantage over plain Java when it comes to avoiding
 reverse engineering.
 
-Technically, all mobile applications are vulnerable to code tampering but some
+Technically, all mobile applications are vulnerable to code tampering, but some
 are historically more targeted (e.g. mobile games) than others. Deciding whether
 or not to address this risk is a matter of business impact that can range from
 revenue loss to reputational damage.
 
 [OWASP Reverse Engineering and Code Modification Prevention Project][1] is a
 great reference on how to detect and prevent Reverse Engineering and Code
-Modification. Generally speaking applications should be able to detect at
+Modification. Generally speaking, applications should be able to detect at
 runtime whether code was added or removed based upon what they know about their
 integrity at compile time.
 
-To address this weakness on [Goatlin][0] we followed OWASP recommendation on
+To address this weakness on [Goatlin][0], we followed OWASP recommendation on
 Android Root detection. The [`RootDetectionHelper` class][3] implements a few
 techniques such as:
 
@@ -99,7 +99,7 @@ private fun detectForSUBinaries(): Boolean {
 To prevent the application to run on a Rooted environment, the
 `RootDetectionHelper.check()` method, which combines all the described
 techniques, is called on our main activity (Login). If a Rooted environment is
-detected then the user is presented a dialog and the application is forced to
+detected, then the user is presented a dialog and the application is forced to
 close:
 
 ```kotlin

@@ -2,7 +2,7 @@ M6: Insecure Authorization
 ==========================
 
 It is important to distinguish between authentication and authorization: the
-former is the act of identifying an individual whereas the later is the act of
+former is the act of identifying an individual whereas the latter is the act of
 checking that the identified individual has the necessary permissions to perform
 the act. To exploit Insecure Authorization, adversaries usually log in to the
 application as a legitimate user first, then they typically force-browse to a
@@ -12,11 +12,11 @@ Because authentication precedes authorization, if an application fails to
 identify an individual before making an API request, then it automatically
 suffers from Insecure Authorization.
 
-Usually Insecure Authorization is greatly associated with IDOR - Insecure Direct
-Object Reference but it is also found on hidden endpoints that developers assume
-will be accessed only by someone with the right role. If the mobile application
-sends the user role or permissions to the back-end as part of the request, it is
-likely vulnerable to Insecure Authorization.
+Usually, Insecure Authorization is greatly associated with IDOR - Insecure
+Direct Object Reference, but it is also found on hidden endpoints that
+developers assume will be accessed only by someone with the right role. If the
+mobile application sends the user role or permissions to the back-end as part of
+the request, it is likely vulnerable to Insecure Authorization.
 
 The movie below demonstrates how Insecure Authorization can be exploited on 
 [Goatlin][0].

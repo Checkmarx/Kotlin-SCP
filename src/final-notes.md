@@ -2,7 +2,7 @@ Final Notes
 ===========
 
 The Checkmarx Research team is confident that this Kotlin Secure Coding
-Practices Guide provided value to you. We encourage you to refer to it often, as
+Practices guide provided value to you. We encourage you to refer to it often, as
 you're developing Android apps written in Kotlin. The information found in this
 guide can help you develop more-secure apps and avoid the common mistakes and
 pitfalls that lead to vulnerable applications. Understanding that exploitation

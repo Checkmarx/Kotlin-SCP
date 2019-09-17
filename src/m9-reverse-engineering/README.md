@@ -60,13 +60,13 @@ As you can see, there is no obfuscation at all on the [Goatlin][0]. An attacker
 is able to easily analyze the app in order to understand the inner mechanisms.
 
 In order to slow down the process of reverse engineering, developers use various
-techniques to obfuscate the code such as renaming the variables and name
+techniques to obfuscate the code, such as renaming the variables and name
 functions with weird names or using a non-Latin charset. Here is an example
 where all the variables and method names were renamed:
 
 ![Android app using obfuscation technique][jadx-obfuscation]
 
-The most well known tool to perform code obfuscation is [Proguard][4].
+The most well-known tool to perform code obfuscation is [Proguard][4].
 Quoting Wikipedia: "_ProGuard is an open source command-line tool that shrinks,
 optimizes and obfuscates Java code. It is able to optimize bytecode as well as
 detect and remove unused instructions._"

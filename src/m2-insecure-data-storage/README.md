@@ -10,13 +10,13 @@ The following solutions are provided by Android:
 * **Internal file storage**: Files stored on the device and only available for
   the app.
 * **External file storage**: Files usually stored on the SDCard (or any
-  removable device). Files are available for everyone.
+  removable device) are available for everyone.
 * **Databases**: Internal SQLite databases only available for the app.
 * **Shared Preferences**: XML files mostly used as key-pair values to store
   configuration parameters.
 
 Unfortunately, it is very common to find sensitive information stored in clear
-text. For instance, it is frequent to find API keys, passwords, Personally
+text. For instance, it is frequent to find API keys, passwords, and Personally
 Identifiable Information (PII) stored on the Shared Preferences or databases
 used by the app.
 

@@ -18,7 +18,7 @@ Keep in mind that encryption depends on secrets (keys) and even the best
 encryption algorithm will be useless if your application fails to keep its
 secrets by making the keys available to the attacker.
 
-In the movie below you'll see how [Goatlin][0] cryptography fails by enabling
+In the movie below, you'll see how [Goatlin][0] cryptography fails by enabling
 the adversary to get the unencrypted version of stored data.
 
 {% youtube %}
@@ -79,13 +79,13 @@ class CryptoHelper {
 
 There is another implementation detail worth mentioning, since it may prove
 challenging. AES GCM encryption requires an [Initialization Vector][8] (IV). By
-default this is a random value. The value used during encryption should then be
+default, this is a random value. The value used during encryption should then be
 used on the corresponding decryption operation. Although randomness can be
 disabled (see [`setRandomizedEncryptionRequired()`][9]), replacing random IV by
 a constant value will reduce encryption security.
 
 In our implementation we kept IV random, prepending it to the encrypted message.
-Then, while decrypting, the first 12 bytes correspond to the IV and the rest
+Then while decrypting, the first 12 bytes correspond to the IV and the rest
 corresponds to the message. Note that IV is not secret.
 
 ## Resources

@@ -18,7 +18,7 @@ jailbroken devices through runtime manipulation or modification of the binary.
 Insecure Authentication is not only about guessable passwords, default user
 accounts, or data breaches. Under certain circumstances, the authentication
 mechanism can also be bypassed and the system will fail to identify the user and
-log its (malicious) activity. Usually in this scenario, user's will gain access
+log its (malicious) activity. Usually in this scenario, users will gain access
 to sensitive functionalities, since the system will also fail to validate its
 role, highlighting problems with the authorization controls as well.
 
