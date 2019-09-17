@@ -7,7 +7,7 @@ carrier's network or between some Wi-Fi network and the internet.
 
 Although exploiting the mobile carrier's network is not an impossible task,
 exploiting a Wi-Fi network is usually much easier. If communications lack
-SSL/TLS, then an adversary will be able not only to steal the data, but also to
+SSL/TLS, then an adversary will be able to not only steal the data, but also to
 execute Man-in-the-Middle (MitM) attacks.
 
 The following video demonstrates Insecure Communications exploitation on [Kotlin
@@ -25,17 +25,17 @@ client-server communications and also implement [Certificate Pinning][3] to
 remove the "conference of trust" to no longer depend on Certificate Authorities
 or third-party agents regarding decisions on a server's identity.
 
-To enable SSL/TLS we will need certificates to be available in the server.
+To enable SSL/TLS, we will need certificates to be available in the server.
 Nowadays you can get free certificates with [Let's Encrypt][4] - a free,
 automated and open Certificate Authority. You'll [get the certificates deployed
 easily by following the documentation][5].
 
-On [Goatlin][0] we'll go with a self-signed certificate. While this is a common
+On [Goatlin][0], we'll go with a self-signed certificate. While this is a common
 practice during the development stage, it is not recommended for production
 systems. How to generate the certificate is out of scope for this guide.
 
 With the certificate in hand, we should make a few changes on our back-end API
-to make it use HTTPS instead of HTTP
+to make it use HTTPS instead of HTTP:
 
 * Put `server.key` and `server.crt` under the `ssl` directory
 * Replace `http` package with `https` one

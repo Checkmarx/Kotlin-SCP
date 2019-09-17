@@ -14,7 +14,7 @@ Consistent coding patterns and coding style guidelines broadly accepted in the
 organization will help to improve code quality. Since these issues are not
 easily detected on code review, using a static analysis tool usually provides
 the results. Buffer overflows and memory leaks should be top priorities over
-other code quality issues yet to be solved.
+other code quality issues yet to be resolved.
 
 [Detekt][1] is one of such static code analysis tools for Kotlin licensed under
 the [Apache License 2.0][3]. It provides several integration mechanisms such as

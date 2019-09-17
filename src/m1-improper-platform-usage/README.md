@@ -57,7 +57,7 @@ Row: 0 id=1, username=admin, password=admin
 Row: 1 id=2, username=kotlin, password=goat
 ```
 
-Below you can see this is action
+Below, you can see this in action:
 
 {%youtube%}U5czs2s8Ifc{%endyoutube%}
 
@@ -104,7 +104,7 @@ This issue was fixed on [Goatlin][0]: you can find it on
 [feature/m1-improper-platform-usage branch][10].
 
 More information about how to test improper platform usage can be found on the
-[OWASP Mobile Testing Guide][5] and especially on the [Testing Platorm
+[OWASP Mobile Testing Guide][5] and especially on the [Testing Platform
 Interaction][6] section.
 
 ## Resources
