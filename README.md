@@ -1,3 +1,8 @@
+---
+layout: home
+nav_order: 0
+---
+
 # Introduction
 
 *Kotlin Guide - Mobile Application Secure Coding Practices*, is a guide written

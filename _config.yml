@@ -1,11 +1,17 @@
 title: Kotlin SCP
 email: your-email@example.com
 description: >-
-  Kotlin Secure Coding Practices Quick Reference Guide.
+  Kotlin Guide - Mobile Application Secure Coding Practices, is a guide written
+  for anyone using Kotlin for mobile development.
 baseurl: ""
 url: ""
 twitter_username: Checkmarx
 github_username:  Checkmarx
+
+readme_index:
+  enabled:          true
+  remove_originals: true
+  with_frontmatter: true
 
 # Build settings
 markdown: kramdown
