@@ -1,3 +1,7 @@
+---
+nav_order: 7
+---
+
 M7: Client Code Quality
 =======================
 

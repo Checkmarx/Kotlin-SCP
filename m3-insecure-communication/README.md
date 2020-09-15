@@ -1,3 +1,7 @@
+---
+nav_order: 3
+---
+
 M3: Insecure Communication
 ==========================
 
@@ -15,9 +19,7 @@ Goat][0] mobile application. The movie shows network monitoring, what gives an
 adversary access to exchanged data nevertheless, due to insecure communication,
 Man-in-the-Middle (MitM) would also be possible.
 
-{% youtube %}
-https://www.youtube.com/watch?v=0onwBnAvWI4
-{% endyoutube %}
+{% include youtube-player.html id="0onwBnAvWI4" %}
 
 Now that we have seen the exploitation taking place, it's time to go back to the
 application source code and fix this issue. We will add SSL/TLS to all

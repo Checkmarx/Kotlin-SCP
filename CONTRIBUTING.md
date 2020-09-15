@@ -1,10 +1,12 @@
-Please **DO NOT** open pull requests to the `master` branch: pull requests
-should be opened to the `develop` branch as `master` is reserved for releases.
-
+---
+nav_order: 12
 ---
 
-How to Contribute
+How-to Contribute
 =================
+
+Please **DO NOT** open pull requests to the `master` branch: pull requests
+should be opened to the `develop` branch as `master` is reserved for releases.
 
 Here are the basics of contributing to GitHub:
 

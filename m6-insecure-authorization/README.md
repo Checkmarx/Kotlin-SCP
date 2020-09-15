@@ -1,3 +1,7 @@
+---
+nav_order: 6
+---
+
 M6: Insecure Authorization
 ==========================
 
@@ -21,9 +25,7 @@ the request, it is likely vulnerable to Insecure Authorization.
 The movie below demonstrates how Insecure Authorization can be exploited on 
 [Goatlin][0].
 
-{% youtube %}
-https://www.youtube.com/watch?v=vsyTMpRnFtA
-{% endyoutube %}
+{% include youtube-player.html id="vsyTMpRnFtA" %}
 
 Insecure Authorization in [Goatlin][0] is clearly a back-end issue.
 Although [API routes][1] include [**authentication** middleware][2] when

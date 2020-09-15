@@ -1,3 +1,7 @@
+---
+nav_order: 5
+---
+
 M5: Insufficient Cryptography
 =============================
 
@@ -21,9 +25,7 @@ secrets by making the keys available to the attacker.
 In the movie below, you'll see how [Goatlin][0] cryptography fails by enabling
 the adversary to get the unencrypted version of stored data.
 
-{% youtube %}
-https://www.youtube.com/watch?v=FbIj2hBMeaE
-{% endyoutube %}
+{% include youtube-player.html id="FbIj2hBMeaE" %}
 
 To address Insufficient Cryptography, we will replace the encryption algorithm
 by the [AES - Advanced Encrypt Standard (Rijndael)][1]. As many other symmetric

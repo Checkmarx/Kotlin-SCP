@@ -1,3 +1,7 @@
+---
+nav_order: 9
+---
+
 M9: Reverse Engineering
 =======================
 
@@ -52,9 +56,7 @@ In order to obtain Java code, an attacker can use [jadx][2] or [jd-gui][3] to
 decompile the app. The video below demonstrates it using [jadx][2] on [Kotlin
 Goat][0]
 
-{% youtube %}
-https://www.youtube.com/watch?v=8b882SulnQA
-{% endyoutube %}
+{% include youtube-player.html id="8b882SulnQA" %}
 
 As you can see, there is no obfuscation at all on the [Goatlin][0]. An attacker
 is able to easily analyze the app in order to understand the inner mechanisms.

@@ -1,3 +1,7 @@
+---
+nav_order: 1
+---
+
 M1: Improper Platform Usage
 ===========================
 From the [Android documentation][4]: "_Content providers are one of the primary
@@ -59,7 +63,7 @@ Row: 1 id=2, username=kotlin, password=goat
 
 Below, you can see this in action:
 
-{%youtube%}U5czs2s8Ifc{%endyoutube%}
+{% include youtube-player.html id="U5czs2s8Ifc" %}
 
 In the same manner, the app leaks a Content provider named `.NotesProvider` for
 the notes created by the user.
