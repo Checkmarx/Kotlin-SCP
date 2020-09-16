@@ -13,6 +13,10 @@ readme_index:
   remove_originals: true
   with_frontmatter: true
 
+aux_links:
+  "Kotlin SCP on GitHub":
+    - "//github.com/Checkmarx/Kotlin-SCP/"
+
 # Build settings
 markdown: kramdown
 remote_theme: pmarsceill/just-the-docs
