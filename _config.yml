@@ -17,6 +17,9 @@ aux_links:
   "Kotlin SCP on GitHub":
     - "//github.com/Checkmarx/Kotlin-SCP/"
 
+ga_tracking: UA-6105155-1
+ga_tracking_anonymize_ip: true
+
 # Build settings
 markdown: kramdown
 remote_theme: pmarsceill/just-the-docs
