@@ -1,4 +1,8 @@
-node_modules/
-npm-debug.log
-_book
+_site/
+_posts/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+*.lock
 *.swp
+

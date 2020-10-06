@@ -1,6 +1,6 @@
-This book is available for [online reading][online] or download in [PDF][pdf],
-[Mobi][mobi] and [ePub][epub] formats.
-
+---
+layout: home
+nav_order: 0
 ---
 
 # Introduction
@@ -8,7 +8,7 @@ This book is available for [online reading][online] or download in [PDF][pdf],
 *Kotlin Guide - Mobile Application Secure Coding Practices*, is a guide written
 for anyone using [Kotlin][1] for mobile development.
 
-This book is a collaborative effort started by [Checkmarx Security Research
+This guide is a collaborative effort started by [Checkmarx Security Research
 Team][2], open sourced for community contributions. Its structure covers the
 [OWASP Mobile Top 10 2016][3] intended to help developers avoid common mistakes.
 
@@ -17,7 +17,7 @@ applications 100% interoperable with Java™ and Android™_, primarily develope
 by the team at [JetBrains][4]. It is now fully supported by Google as an
 alternative to the Android standard Java compiler.
 
-## Why This Book
+## Why This Guide
 
 Since May 7th 2019, Kotlin is Google's preferred language for Android app
 development. So, it is important for developers to familiarize with this new
@@ -28,7 +28,7 @@ industry overall about common coding errors, and brings awareness of
 vulnerabilities that are often introduced during the software development
 process.
 
-## The Audience for this Book
+## The Audience for this Guide
 
 The primary audience of this guide is Android developers. This guide can still
 be used by penetration testers to learn how to identify well-known
@@ -36,10 +36,10 @@ vulnerabilities on Kotlin applications.
 
 ## What You Will Learn
 
-The authors of this book mapped the OWASP Mobile Top 10 security weaknesses to
+The authors of this guide mapped the OWASP Mobile Top 10 security weaknesses to
 Kotlin on a weakness-by-weakness basis while providing examples,
 recommendations, and fixes to help developers avoid common mistakes and
-pitfalls. After reading this book and referring to it often, you will learn how
+pitfalls. After reading this guide and referring to it often, you will learn how
 to ensure you are developing secure mobile apps using Kotlin.
 
 ## About Checkmarx
@@ -70,7 +70,7 @@ open to anyone interested in improving application security_".
 
 ## How to Contribute
 
-To learn how to contribute, please refer to [CONTRIBUTING.md][8].
+To learn how to contribute, please refer to [How-to Contribute section][8].
 
 ## License
 
@@ -90,6 +90,6 @@ make clear to others the license terms of this work
 [4]: https://www.jetbrains.com/
 [6]: https://www.twitter.com/checkmarx
 [7]: https://www.owasp.org/index.php/OWASP_Mobile_Security_Project
-[8]: ./how-to-contribute.md
+[8]: ./CONTRIBUTING.md
 [9]: https://creativecommons.org/licenses/by-sa/4.0/
 [10]: https://www.owasp.org/
