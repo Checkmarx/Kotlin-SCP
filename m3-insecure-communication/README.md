@@ -72,10 +72,8 @@ openssl x509 -in server.crt -pubkey -noout | openssl pkey -pubin -outform der | 
 
 [OkHttp](https://square.github.io/okhttp/) is one of the most commonly used libraries to manage network requests in Android.
 
-Parameterising this library to use Certificate or Public Key Pinning is very simple:
-
-All we need to do is modify the `create` method of our API service `Client` interface
-as shown below:
+Parameterising this library to use Certificate or Public Key Pinning is very simple. All we need to do is modify the `create` 
+method of our API service `Client` interface, as shown below:
 
 ```kotlin
 interface Client {
