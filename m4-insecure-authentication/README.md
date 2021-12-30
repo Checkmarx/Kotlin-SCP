@@ -120,7 +120,7 @@ class SignupActivity : AppCompatActivity() {
 
 Although the passwords are now stronger, they're still stored as clear text on a
 database. Someone with access to the device is still able to retrieve and
-manipulate database records. To address this issue, we will store a salted
+read database records. To address this issue, we will store a salted
 version of `username` and `password`.
 
 In the case of password storage, [OWASP recommends the following algorithms][6]:
