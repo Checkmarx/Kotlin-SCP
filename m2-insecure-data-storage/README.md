@@ -10,14 +10,18 @@ kind of storage used by developers depends on the kind of data stored, the usage
 of the data, and also whether the data should be kept private or shared to other
 apps.
 
-The following solutions are provided by Android:
-* **Internal file storage**: Files stored on the device and only available for
-  the app.
-* **External file storage**: Files usually stored on the SDCard (or any
-  removable device) are available for everyone.
-* **Databases**: Internal SQLite databases only available for the app.
-* **Shared Preferences**: XML files mostly used as key-pair values to store
-  configuration parameters.
+Data in Android can be stored in:
+* **App-specific storage**: dedicated directories within internal or external storage 
+  than enable developers to store files that are meant to be used by the app only;
+* **Shared storage**: directories that contains files that are meant to to be shared
+  by multiple apps;
+* **KeyStore**: a secure way to store cryptographic keys, and other sensitive information.
+
+Data is typically stored in the following formats:
+* **SQLite Databases**: the preferred way to store structure data in app-specific 
+  directories;
+* **Shared Preferences**: an Android API that helps developers store key-pair values 
+  in a dedicated directory inside internal storage.
 
 Unfortunately, it is very common to find sensitive information stored in clear
 text. For instance, it is frequent to find API keys, passwords, and Personally
@@ -153,7 +157,16 @@ by the user, the authentication is successful.
 
 An attacker able to access the database of the app (rooting the device, backup
 of the app, etc.) can retrieve the credentials of the different users using the
-app. Using [sqlitebrowser][4], it is easy to inspect the content of an SQLite
+app.
+
+In this example, since this database is stored under `/data/data/com.cx.vulnerablekotlinapp/databases` 
+we can fetch it as such:
+
+```
+~ adb exec-out run-as com.cx.vulnerablekotlinapp cat /data/data/com.cx.vulnerablekotlinapp/databases/data > /tmp/kotlin-goat.sqlite
+```
+
+Using [sqlitebrowser][4], it is easy to inspect the content of an SQLite
 database. Here is the content of the `Accounts` table used by the app:
 
 ![Viewing the content of the Goatlin database][sqlitebrowser-database]
