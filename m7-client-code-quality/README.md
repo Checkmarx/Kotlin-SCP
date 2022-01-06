@@ -83,7 +83,7 @@ Ruleset: style - 4h 10min debt
 * [OWASP Mobile Top 10 2016: M7 - Client Code Quality][7]
 
 [0]: https://github.com/Checkmarx/Goatlin
-[1]: https://arturbosch.github.io/detekt/
+[1]: https://github.com/detekt/detekt/
 [2]: https://www.sonarqube.org/
 [3]: https://www.apache.org/licenses/LICENSE-2.0
 [4]: https://kotlinlang.org/docs/reference/coding-conventions.html
