@@ -12,9 +12,8 @@ APIs, or simply modify application's data and resources. This is known as **Code
 Tampering**.
 
 Rogue mobile applications play an important role in fraud-based attacks,
-becoming even more prevalent than malware. Typically attackers exploit code
-modification via malicious types of applications, tricking users to install the
-app via phishing attacks.
+becoming even more prevalent than malware. Typically attackers are able to exploit 
+code modification by tricking users into installing malicious/modified apps via phishing attacks.
 
 Notice that Kotlin has no advantage over plain Java when it comes to avoiding
 reverse engineering.
