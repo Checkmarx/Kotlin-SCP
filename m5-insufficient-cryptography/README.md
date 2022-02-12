@@ -101,7 +101,7 @@ class CryptoHelper {
 }
 ```
 
-Finally, this key us used to encrypt/decrypt the user's notes:
+Finally, this key is used to encrypt/decrypt the user's notes:
 
 ```kotlin
 /**
