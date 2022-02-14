@@ -28,7 +28,7 @@ the adversary to get the unencrypted version of stored data.
 {% include youtube-player.html id="FbIj2hBMeaE" %}
 
 To address Insufficient Cryptography, we will replace the encryption algorithm
-by the [AES - Advanced Encrypt Standard (Rijndael)][1]. As many other symmetric
+with the [AES - Advanced Encrypt Standard (Rijndael)][1]. As many other symmetric
 ciphers, AES can be implemented in different modes. In this case, we will use
 the GCM (Galoi Counter Mode).
 GCM is preferable to most popular CBC/ECB modes because the former is an
@@ -38,7 +38,7 @@ prior to message decryption and ensuring the message has not been tampered with.
 
 All major changes were done in the [CryptoHelper class][5] which was given two
 new methods: `createUserKey()` and `getUserKey()`. `encrypt()` and `decrypt()`
-methods were also changed to receive a `usernane` argument:
+methods were also changed to receive a `username` argument:
 
 ```kotlin
 package com.cx.goatlin.helpers
@@ -55,8 +55,31 @@ class CryptoHelper {
 
 As previously stated, encryption depends on secrets (keys), which should be
 handled carefully. In this case, on successful signup, a random key is created
-and persisted in [Android Keystore][2]. This key is user specific (see
-[SignupActivity][6]) and it is used to encrypt/decrypt a user's notes only.
+and persisted in [Android Keystore][2]:
+
+```kotlin
+package com.cx.goatlin.helpers
+// ...
+class CryptoHelper {
+    companion object {
+        fun createUserKey(username: String) {
+            val keyGenerator: KeyGenerator = KeyGenerator.getInstance(
+                KeyProperties.KEY_ALGORITHM_AES, "AndroidKeyStore"
+            )
+            val parameterSpec: KeyGenParameterSpec = KeyGenParameterSpec.Builder(
+                username,
+                KeyProperties.PURPOSE_ENCRYPT or KeyProperties.PURPOSE_DECRYPT
+            )
+            .setBlockModes(KeyProperties.BLOCK_MODE_GCM)
+            .setEncryptionPaddings(KeyProperties.ENCRYPTION_PADDING_NONE)
+            .build()
+
+            keyGenerator.init(parameterSpec)
+            keyGenerator.generateKey()
+        }
+    }
+}
+```
 
 Every time encryption/decryption is required, the `username` should be provided
 to the appropriate `CryptoHelper` method, since it is used as an alias to
@@ -72,15 +95,32 @@ class CryptoHelper {
                 load(null)
             }
             val entry = ks.getEntry(username, null) as? KeyStore.SecretKeyEntry
-            // @todo handle null entry
             return entry?.secretKey
         }
     }
 }
 ```
 
-There is another implementation detail worth mentioning, since it may prove
-challenging. AES GCM encryption requires an [Initialization Vector][8] (IV). By
+Finally, this key is used to encrypt/decrypt the user's notes:
+
+```kotlin
+/**
+ * Encrypts given `message` using user's (`username`) specific encryption key.
+ * Returning value includes the IV as prefix.
+ */
+fun encrypt(original: String, username: String): String {
+    val entry = getUserKey(username)
+    val cipher: Cipher = Cipher.getInstance("AES/GCM/NoPadding")
+    cipher.init(Cipher.ENCRYPT_MODE, entry)
+
+    val iv:ByteArray = cipher.iv
+    val message: ByteArray = cipher.doFinal(original.toByteArray(Charsets.UTF_8))
+    val final: ByteArray = iv+message
+    return Base64.encodeToString(final, Base64.DEFAULT)
+}
+```
+
+As you can see above, AES GCM encryption requires an [Initialization Vector][8] (IV). By
 default, this is a random value. The value used during encryption should then be
 used on the corresponding decryption operation. Although randomness can be
 disabled (see [`setRandomizedEncryptionRequired()`][9]), replacing random IV by
